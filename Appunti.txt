@@ -1,0 +1,76 @@
+Ospedale:
+- IdOspedale(opzionale)
+- Nome
+- Indirizzo
+- Telefono
+- idDirettore
+
+Persona:
+- Nome
+- Cognome
+- DataDiNascita
+- Sesso
+- CodFiscale
+- Telefono
+- Mail
+- idResidenza
+- Via(opzionale)
+
+Residenza:
+- IdResidenza
+- Città
+- Provincia
+- CAP
+- TotaleVaccinati(da calcolare)
+- TotaleAbitanti
+
+Infermiere:
+- IdInfermiere
+- DataAssunzione
+
+Paziente:
+- IdPaziente
+- idPatologia
+
+Patologia: (Opzionale)
+- idPatologia
+- NomePatologia
+- Descrizione
+
+Vaccino:
+- IdVaccino
+- Nome
+- CasaFarmaceutica
+- DurataRichiamo(Pfizer -> 21gg, Moderna -> 28, Astrazeneca -> 63gg)
+- Info(mRNA -> Pfizer e Moderna, Vettore virale -> Astrazeneca)
+- PrezzoXEntità
+- idFornitore
+
+Fornitore:
+- idFornitore
+- NomeFornitore
+- Telefono
+
+Ordine:
+- IdOrdine
+- IdVaccino
+- idFornitore
+- IdOspedale
+- Quantità
+- DataOrdine
+
+Magazzino:
+- IdMagazzino
+- idVaccino(N a N)              Magazzino (N ---> 1) DoseInMagazzino (1 ---> N) Vaccino    Da confermare
+
+Dose: ?
+- 
+
+Vaccinazione:
+- idVaccinazione
+- IdPaziente
+- IdVaccino
+- IdInfermiere
+- DataEffettuazione
+- nRichiamo
+- DataRichiamo(opzionale)
