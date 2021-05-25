@@ -1,0 +1,5 @@
+1.Descriviamo Ospedale, Persone, Infermiere, Paziente, Vaccino
+2.Aggiungi Fornitore, Magazzino, Dosi, Ordini
+3.Aggiungi Vaccinazione, Residenza e Patologia
+
+4.Schema finale
