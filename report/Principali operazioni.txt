@@ -1,0 +1,15 @@
+Elenco principali azioni per gli infermieri:
+- Inserimento di una nuova vaccinazione.
+- Eliminazione di una vaccinazione(se ad esempio è aggiunta per errore).
+- Inserimento di un nuovo paziente.
+- Visualizzazione dei vaccinati a seconda dell'infermiere che ha somministrato il vaccino.
+
+Elenco principali azioni per il direttore:
+- Visualizzazione delle vaccinazioni effettuate in un determinato giorno.
+- Inserimento di un nuovo infermiere.
+- Visualizzazione dei pazienti vaccinati.
+- Visualizzazione del numero di vaccinati per ogni città registrata.
+- Visualizzazione delle scorte in magazzino relative ai vari vaccini.
+- Inserimento e modifica di nuove scorte di vaccini nel magazzino.
+- Visualizzazione delle informazioni relative ai fornitori dei vari vaccini.
+- Top 10 degli infermieri che hanno effettuato più vaccinazioni.
