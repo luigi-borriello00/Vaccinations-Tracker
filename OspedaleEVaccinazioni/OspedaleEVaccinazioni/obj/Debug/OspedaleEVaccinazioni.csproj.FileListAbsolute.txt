@@ -1,0 +1,12 @@
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\bin\Debug\OspedaleEVaccinazioni.exe.config
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\bin\Debug\OspedaleEVaccinazioni.exe
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\bin\Debug\OspedaleEVaccinazioni.pdb
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.csprojAssemblyReference.cache
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.DirectorForm.resources
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.LoginForm.resources
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.Properties.Resources.resources
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.csproj.GenerateResource.cache
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.csproj.CoreCompileInputs.cache
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.exe
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.pdb
+C:\Users\Luigi\source\repos\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.NurseForm.resources
