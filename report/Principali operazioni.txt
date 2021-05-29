@@ -1,4 +1,5 @@
 Elenco principali azioni per gli infermieri:
+- Inserimento di una nuova Residenza.
 - Inserimento di una nuova vaccinazione.
 - Inserimento di un nuovo paziente.
 - Visualizzazione dei vaccinati a seconda dell'infermiere che ha somministrato il vaccino.
