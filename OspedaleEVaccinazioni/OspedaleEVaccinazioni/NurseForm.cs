@@ -82,5 +82,10 @@ namespace OspedaleEVaccinazioni
             this.namePathology.Text = "";
             this.descPathology.Text = "";
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
