@@ -3,7 +3,7 @@ Ospedale:
 - Nome
 - Indirizzo
 - Telefono
-- idDirettore
+- IdDirettore
 
 Persona:  
 - IdPersona
@@ -14,7 +14,6 @@ Persona:
 - CodFiscale
 - Telefono
 - Mail
-- IdResidenza
 
 Residenza:  
 - IdResidenza
@@ -30,7 +29,8 @@ Infermiere:
 
 Paziente:  
 - IdPaziente
-- idPatologia
+- IdPatologia
+- IdResidenza
 
 Patologia: (Opzionale)  
 - IdPatologia
@@ -44,22 +44,22 @@ Vaccino:
 - Richiamo(Pfizer -> 21gg, Moderna -> 28, Astrazeneca -> 63gg)
 - Info(mRNA -> Pfizer e Moderna, Vettore virale -> Astrazeneca)
 - PrezzoUnitario
-- idFornitore
+- IdFornitore
 
 Fornitore:  
-- idFornitore
+- IdFornitore
 - NomeFornitore
 - Telefono
 
 Magazzino:
 - IdMagazzino
-- idVaccino(N a N)              
+- IdVaccino(N a N)              
 
 Dosi:
 - 
 
 Vaccinazione:  
-- idVaccinazione
+- IdVaccinazione
 - IdPaziente
 - IdVaccino
 - IdInfermiere

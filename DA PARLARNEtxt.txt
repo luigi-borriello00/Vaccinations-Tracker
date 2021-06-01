@@ -1,0 +1,4 @@
+Cardinalità  Vaccino-Dosi e Paziente-Patologia
+Decidere identità ecc.
+Decidere grandezza campi e i tipi
+Prezzo unitario in vaccino? Serve?
