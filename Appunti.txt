@@ -21,7 +21,6 @@ Residenza:
 - Provincia
 - CAP
 - TotaleVaccinati(da calcolare)
-- TotaleAbitanti
 
 Infermiere:  
 - IdInfermiere
