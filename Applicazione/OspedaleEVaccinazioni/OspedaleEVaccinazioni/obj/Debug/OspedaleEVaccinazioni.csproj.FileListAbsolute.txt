@@ -34,6 +34,4 @@ C:\Users\Luigi\Desktop\Uni\2° Anno\Basi di Dati\progetto\progettoBasiDiDati\App
 C:\Users\Luigi\Desktop\Uni\2° Anno\Basi di Dati\progetto\progettoBasiDiDati\Applicazione\OspedaleEVaccinazioni\OspedaleEVaccinazioni\bin\Debug\OspedaleEVaccinazioni.exe.config
 C:\Users\Luigi\Desktop\Uni\2° Anno\Basi di Dati\progetto\progettoBasiDiDati\Applicazione\OspedaleEVaccinazioni\OspedaleEVaccinazioni\bin\Debug\OspedaleEVaccinazioni.exe
 C:\Users\Luigi\Desktop\Uni\2° Anno\Basi di Dati\progetto\progettoBasiDiDati\Applicazione\OspedaleEVaccinazioni\OspedaleEVaccinazioni\bin\Debug\OspedaleEVaccinazioni.pdb
-C:\Users\Luigi\Desktop\Uni\2° Anno\Basi di Dati\progetto\progettoBasiDiDati\Applicazione\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.NurseViewVaccination.resources
 C:\Users\Luigi\Desktop\Uni\2° Anno\Basi di Dati\progetto\progettoBasiDiDati\Applicazione\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.DirectorWarehouse.resources
-C:\Users\Luigi\Desktop\Uni\2° Anno\Basi di Dati\progetto\progettoBasiDiDati\Applicazione\OspedaleEVaccinazioni\OspedaleEVaccinazioni\obj\Debug\OspedaleEVaccinazioni.DirectorView.resources

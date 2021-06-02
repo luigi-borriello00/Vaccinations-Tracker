@@ -52,8 +52,7 @@ namespace OspedaleEVaccinazioni
 
         private void wareHouseDelete_Click(object sender, EventArgs e)
         {
-            this.warehouseId.Text = "";
-            this.wareHouseName.Text = "";
+            
         }
 
         private void supplierDelete_Click(object sender, EventArgs e)

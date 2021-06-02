@@ -56,12 +56,6 @@
     <Compile Include="DirectorForm.Designer.cs">
       <DependentUpon>DirectorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirectorView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DirectorView.Designer.cs">
-      <DependentUpon>DirectorView.cs</DependentUpon>
-    </Compile>
     <Compile Include="DirectorWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,19 +74,10 @@
     <Compile Include="NurseForm.Designer.cs">
       <DependentUpon>NurseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NurseViewVaccination.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NurseViewVaccination.Designer.cs">
-      <DependentUpon>NurseViewVaccination.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DirectorForm.resx">
       <DependentUpon>DirectorForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DirectorView.resx">
-      <DependentUpon>DirectorView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DirectorWarehouse.resx">
       <DependentUpon>DirectorWarehouse.cs</DependentUpon>
@@ -102,9 +87,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NurseForm.resx">
       <DependentUpon>NurseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NurseViewVaccination.resx">
-      <DependentUpon>NurseViewVaccination.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

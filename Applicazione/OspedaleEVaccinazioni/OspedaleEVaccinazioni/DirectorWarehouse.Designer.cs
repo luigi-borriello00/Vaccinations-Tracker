@@ -37,13 +37,6 @@ namespace OspedaleEVaccinazioni
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.wareHouseDelete = new System.Windows.Forms.Button();
-            this.wareHouseInsert = new System.Windows.Forms.Button();
-            this.wareHouseName = new System.Windows.Forms.TextBox();
-            this.warehouseId = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.residencePatient = new System.Windows.Forms.ComboBox();
             this.vaccineDelete = new System.Windows.Forms.Button();
             this.vaccineInsert = new System.Windows.Forms.Button();
@@ -57,11 +50,9 @@ namespace OspedaleEVaccinazioni
             this.vaccineTime = new System.Windows.Forms.TextBox();
             this.vaccinePrice = new System.Windows.Forms.TextBox();
             this.vaccineInfo = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.supplierDelete = new System.Windows.Forms.Button();
             this.supplierInsert = new System.Windows.Forms.Button();
             this.supplierName = new System.Windows.Forms.TextBox();
@@ -74,6 +65,13 @@ namespace OspedaleEVaccinazioni
             this.goBack = new System.Windows.Forms.Button();
             this.wareHouseCombo = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -151,71 +149,6 @@ namespace OspedaleEVaccinazioni
             this.label2.TabIndex = 19;
             this.label2.Text = "IdScorte";
             // 
-            // wareHouseDelete
-            // 
-            this.wareHouseDelete.BackColor = System.Drawing.Color.Red;
-            this.wareHouseDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.wareHouseDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.wareHouseDelete.Location = new System.Drawing.Point(760, 62);
-            this.wareHouseDelete.Name = "wareHouseDelete";
-            this.wareHouseDelete.Size = new System.Drawing.Size(75, 23);
-            this.wareHouseDelete.TabIndex = 35;
-            this.wareHouseDelete.Text = "Cancella";
-            this.wareHouseDelete.UseVisualStyleBackColor = false;
-            this.wareHouseDelete.Click += new System.EventHandler(this.wareHouseDelete_Click);
-            // 
-            // wareHouseInsert
-            // 
-            this.wareHouseInsert.BackColor = System.Drawing.Color.Lime;
-            this.wareHouseInsert.Location = new System.Drawing.Point(760, 102);
-            this.wareHouseInsert.Name = "wareHouseInsert";
-            this.wareHouseInsert.Size = new System.Drawing.Size(75, 23);
-            this.wareHouseInsert.TabIndex = 34;
-            this.wareHouseInsert.Text = "Inserisci";
-            this.wareHouseInsert.UseVisualStyleBackColor = false;
-            // 
-            // wareHouseName
-            // 
-            this.wareHouseName.Location = new System.Drawing.Point(595, 104);
-            this.wareHouseName.Name = "wareHouseName";
-            this.wareHouseName.Size = new System.Drawing.Size(140, 20);
-            this.wareHouseName.TabIndex = 33;
-            // 
-            // warehouseId
-            // 
-            this.warehouseId.Location = new System.Drawing.Point(595, 64);
-            this.warehouseId.Name = "warehouseId";
-            this.warehouseId.Size = new System.Drawing.Size(140, 20);
-            this.warehouseId.TabIndex = 31;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(529, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Nome";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(529, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "IdMagazzino";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(546, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 24);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Aggiungi Magazzino";
-            // 
             // residencePatient
             // 
             this.residencePatient.FormattingEnabled = true;
@@ -229,7 +162,7 @@ namespace OspedaleEVaccinazioni
             this.vaccineDelete.BackColor = System.Drawing.Color.Red;
             this.vaccineDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.vaccineDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.vaccineDelete.Location = new System.Drawing.Point(240, 268);
+            this.vaccineDelete.Location = new System.Drawing.Point(254, 291);
             this.vaccineDelete.Name = "vaccineDelete";
             this.vaccineDelete.Size = new System.Drawing.Size(75, 23);
             this.vaccineDelete.TabIndex = 44;
@@ -240,7 +173,7 @@ namespace OspedaleEVaccinazioni
             // vaccineInsert
             // 
             this.vaccineInsert.BackColor = System.Drawing.Color.Lime;
-            this.vaccineInsert.Location = new System.Drawing.Point(239, 304);
+            this.vaccineInsert.Location = new System.Drawing.Point(253, 327);
             this.vaccineInsert.Name = "vaccineInsert";
             this.vaccineInsert.Size = new System.Drawing.Size(75, 23);
             this.vaccineInsert.TabIndex = 43;
@@ -249,14 +182,14 @@ namespace OspedaleEVaccinazioni
             // 
             // vaccineName
             // 
-            this.vaccineName.Location = new System.Drawing.Point(93, 306);
+            this.vaccineName.Location = new System.Drawing.Point(93, 329);
             this.vaccineName.Name = "vaccineName";
             this.vaccineName.Size = new System.Drawing.Size(140, 20);
             this.vaccineName.TabIndex = 42;
             // 
             // vaccineId
             // 
-            this.vaccineId.Location = new System.Drawing.Point(93, 270);
+            this.vaccineId.Location = new System.Drawing.Point(93, 293);
             this.vaccineId.Name = "vaccineId";
             this.vaccineId.Size = new System.Drawing.Size(140, 20);
             this.vaccineId.TabIndex = 41;
@@ -264,7 +197,7 @@ namespace OspedaleEVaccinazioni
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 309);
+            this.label4.Location = new System.Drawing.Point(9, 332);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 40;
@@ -272,7 +205,7 @@ namespace OspedaleEVaccinazioni
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(9, 338);
+            this.label7.Location = new System.Drawing.Point(9, 361);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 27);
             this.label7.TabIndex = 39;
@@ -281,7 +214,7 @@ namespace OspedaleEVaccinazioni
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 273);
+            this.label10.Location = new System.Drawing.Point(9, 296);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 13);
             this.label10.TabIndex = 38;
@@ -291,7 +224,7 @@ namespace OspedaleEVaccinazioni
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(26, 225);
+            this.label11.Location = new System.Drawing.Point(26, 248);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(160, 24);
             this.label11.TabIndex = 37;
@@ -299,43 +232,35 @@ namespace OspedaleEVaccinazioni
             // 
             // vaccineHouse
             // 
-            this.vaccineHouse.Location = new System.Drawing.Point(93, 345);
+            this.vaccineHouse.Location = new System.Drawing.Point(93, 368);
             this.vaccineHouse.Name = "vaccineHouse";
             this.vaccineHouse.Size = new System.Drawing.Size(140, 20);
             this.vaccineHouse.TabIndex = 45;
             // 
             // vaccineTime
             // 
-            this.vaccineTime.Location = new System.Drawing.Point(93, 378);
+            this.vaccineTime.Location = new System.Drawing.Point(93, 401);
             this.vaccineTime.Name = "vaccineTime";
             this.vaccineTime.Size = new System.Drawing.Size(140, 20);
             this.vaccineTime.TabIndex = 46;
             // 
             // vaccinePrice
             // 
-            this.vaccinePrice.Location = new System.Drawing.Point(93, 413);
+            this.vaccinePrice.Location = new System.Drawing.Point(93, 436);
             this.vaccinePrice.Name = "vaccinePrice";
             this.vaccinePrice.Size = new System.Drawing.Size(140, 20);
             this.vaccinePrice.TabIndex = 47;
             // 
             // vaccineInfo
             // 
-            this.vaccineInfo.Location = new System.Drawing.Point(93, 447);
+            this.vaccineInfo.Location = new System.Drawing.Point(93, 470);
             this.vaccineInfo.Name = "vaccineInfo";
             this.vaccineInfo.Size = new System.Drawing.Size(140, 20);
             this.vaccineInfo.TabIndex = 48;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(93, 481);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
-            this.comboBox1.TabIndex = 49;
-            // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(9, 378);
+            this.label12.Location = new System.Drawing.Point(9, 401);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 38);
             this.label12.TabIndex = 51;
@@ -344,7 +269,7 @@ namespace OspedaleEVaccinazioni
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 416);
+            this.label13.Location = new System.Drawing.Point(9, 439);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(39, 13);
             this.label13.TabIndex = 50;
@@ -353,27 +278,18 @@ namespace OspedaleEVaccinazioni
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 450);
+            this.label14.Location = new System.Drawing.Point(9, 473);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(25, 13);
             this.label14.TabIndex = 53;
             this.label14.Text = "Info";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(9, 484);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 13);
-            this.label15.TabIndex = 52;
-            this.label15.Text = "Fornitore";
             // 
             // supplierDelete
             // 
             this.supplierDelete.BackColor = System.Drawing.Color.Red;
             this.supplierDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.supplierDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.supplierDelete.Location = new System.Drawing.Point(760, 241);
+            this.supplierDelete.Location = new System.Drawing.Point(699, 367);
             this.supplierDelete.Name = "supplierDelete";
             this.supplierDelete.Size = new System.Drawing.Size(75, 23);
             this.supplierDelete.TabIndex = 60;
@@ -384,7 +300,7 @@ namespace OspedaleEVaccinazioni
             // supplierInsert
             // 
             this.supplierInsert.BackColor = System.Drawing.Color.Lime;
-            this.supplierInsert.Location = new System.Drawing.Point(760, 281);
+            this.supplierInsert.Location = new System.Drawing.Point(699, 407);
             this.supplierInsert.Name = "supplierInsert";
             this.supplierInsert.Size = new System.Drawing.Size(75, 23);
             this.supplierInsert.TabIndex = 59;
@@ -393,14 +309,14 @@ namespace OspedaleEVaccinazioni
             // 
             // supplierName
             // 
-            this.supplierName.Location = new System.Drawing.Point(595, 283);
+            this.supplierName.Location = new System.Drawing.Point(539, 409);
             this.supplierName.Name = "supplierName";
             this.supplierName.Size = new System.Drawing.Size(140, 20);
             this.supplierName.TabIndex = 58;
             // 
             // supplierId
             // 
-            this.supplierId.Location = new System.Drawing.Point(595, 243);
+            this.supplierId.Location = new System.Drawing.Point(539, 369);
             this.supplierId.Name = "supplierId";
             this.supplierId.Size = new System.Drawing.Size(140, 20);
             this.supplierId.TabIndex = 57;
@@ -408,7 +324,7 @@ namespace OspedaleEVaccinazioni
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(529, 286);
+            this.label16.Location = new System.Drawing.Point(473, 412);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(35, 13);
             this.label16.TabIndex = 56;
@@ -417,7 +333,7 @@ namespace OspedaleEVaccinazioni
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(529, 246);
+            this.label17.Location = new System.Drawing.Point(473, 372);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(57, 13);
             this.label17.TabIndex = 55;
@@ -427,7 +343,7 @@ namespace OspedaleEVaccinazioni
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(546, 198);
+            this.label18.Location = new System.Drawing.Point(490, 324);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(167, 24);
             this.label18.TabIndex = 54;
@@ -435,7 +351,7 @@ namespace OspedaleEVaccinazioni
             // 
             // supplierCell
             // 
-            this.supplierCell.Location = new System.Drawing.Point(595, 319);
+            this.supplierCell.Location = new System.Drawing.Point(539, 445);
             this.supplierCell.Name = "supplierCell";
             this.supplierCell.Size = new System.Drawing.Size(140, 20);
             this.supplierCell.TabIndex = 62;
@@ -443,7 +359,7 @@ namespace OspedaleEVaccinazioni
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(529, 322);
+            this.label19.Location = new System.Drawing.Point(473, 448);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(49, 13);
             this.label19.TabIndex = 61;
@@ -451,9 +367,9 @@ namespace OspedaleEVaccinazioni
             // 
             // goBack
             // 
-            this.goBack.Location = new System.Drawing.Point(780, 470);
+            this.goBack.Location = new System.Drawing.Point(788, 12);
             this.goBack.Name = "goBack";
-            this.goBack.Size = new System.Drawing.Size(61, 40);
+            this.goBack.Size = new System.Drawing.Size(53, 40);
             this.goBack.TabIndex = 63;
             this.goBack.Text = "Torna Indietro";
             this.goBack.UseVisualStyleBackColor = true;
@@ -476,11 +392,72 @@ namespace OspedaleEVaccinazioni
             this.label20.TabIndex = 64;
             this.label20.Text = "Magazzino";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(539, 481);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(140, 21);
+            this.comboBox1.TabIndex = 67;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(473, 484);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(46, 13);
+            this.label15.TabIndex = 66;
+            this.label15.Text = "Vaccino";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(354, 102);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(487, 201);
+            this.dataGridView1.TabIndex = 68;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(529, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 24);
+            this.label3.TabIndex = 69;
+            this.label3.Text = "Visualizza Info";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(531, 72);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 21);
+            this.button1.TabIndex = 71;
+            this.button1.Text = "Visualizza";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Scorte",
+            "Fornitori"});
+            this.comboBox2.Location = new System.Drawing.Point(531, 45);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(126, 21);
+            this.comboBox2.TabIndex = 72;
+            // 
             // DirectorWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 519);
+            this.ClientSize = new System.Drawing.Size(861, 519);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.wareHouseCombo);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.goBack);
@@ -494,10 +471,8 @@ namespace OspedaleEVaccinazioni
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.vaccineInfo);
             this.Controls.Add(this.vaccinePrice);
             this.Controls.Add(this.vaccineTime);
@@ -511,13 +486,6 @@ namespace OspedaleEVaccinazioni
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.residencePatient);
-            this.Controls.Add(this.wareHouseDelete);
-            this.Controls.Add(this.wareHouseInsert);
-            this.Controls.Add(this.wareHouseName);
-            this.Controls.Add(this.warehouseId);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.stocksDelete);
             this.Controls.Add(this.stocksInsert);
             this.Controls.Add(this.stocksNumber);
@@ -530,6 +498,7 @@ namespace OspedaleEVaccinazioni
             this.Text = "DirectorWarehouse";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DirectorWarehouse_FormClosing);
             this.Load += new System.EventHandler(this.DirectorWarehouse_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,13 +514,6 @@ namespace OspedaleEVaccinazioni
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button wareHouseDelete;
-        private System.Windows.Forms.Button wareHouseInsert;
-        private System.Windows.Forms.TextBox wareHouseName;
-        private System.Windows.Forms.TextBox warehouseId;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox residencePatient;
         private System.Windows.Forms.Button vaccineDelete;
         private System.Windows.Forms.Button vaccineInsert;
@@ -565,11 +527,9 @@ namespace OspedaleEVaccinazioni
         private System.Windows.Forms.TextBox vaccineTime;
         private System.Windows.Forms.TextBox vaccinePrice;
         private System.Windows.Forms.TextBox vaccineInfo;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button supplierDelete;
         private System.Windows.Forms.Button supplierInsert;
         private System.Windows.Forms.TextBox supplierName;
@@ -582,5 +542,11 @@ namespace OspedaleEVaccinazioni
         private System.Windows.Forms.Button goBack;
         private System.Windows.Forms.ComboBox wareHouseCombo;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

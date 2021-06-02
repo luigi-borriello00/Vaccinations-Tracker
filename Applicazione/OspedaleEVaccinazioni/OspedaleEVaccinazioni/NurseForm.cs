@@ -60,7 +60,6 @@ namespace OspedaleEVaccinazioni
             this.city.Text = "";
             this.province.Text = "";
             this.cap.Text = "";
-            this.people.Text = "";
         }
 
         private void InsertResidence_Click(object sender, EventArgs e)
@@ -87,14 +86,17 @@ namespace OspedaleEVaccinazioni
 
         private void Vaccination_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            NurseViewVaccination form = new NurseViewVaccination();
-            form.Show();
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void idNurseText_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.idNurseText.Text = "";
         }
     }
 }

@@ -60,9 +60,16 @@ namespace OspedaleEVaccinazioni
 
         private void goToView_Click(object sender, EventArgs e)
         {
-            DirectorView form = new DirectorView();
-            form.Show();
-            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
