@@ -1,64 +1,61 @@
 Ospedale:  
-- IdOspedale(opzionale)
-- Nome
-- Indirizzo
-- Telefono
-- IdDirettore
+- IdOspedale (Index 4)
+- Nome (Char 15) 
+- Indirizzo (Char 30)
+- Telefono (Numeric 10)
+- IdDirettore (Index 4)
 
 Persona:  
-- IdPersona
-- Nome
-- Cognome
-- DataNascita
-- Sesso
-- CodFiscale
-- Telefono
-- Mail
+- IdPersona (Index 4)
+- Nome (Char 15)
+- Cognome (Char 15)
+- DataNascita (Date 8)
+- Sesso (?)
+- CodFiscale (Varchar 16)
+- Telefono (Numeric 10)
+- Mail (Varchar 30)
+- IdResidenza (Index 4)
 
 Residenza:  
-- IdResidenza
-- Città
-- Provincia
-- CAP
-- TotaleVaccinati
+- IdResidenza (Index 4)
+- Città (Char 20)
+- Provincia (Char 20)
+- CAP (Numeric 8)
+- TotaleVaccinati (Numeric 10)
 
 Infermiere:  
-- IdInfermiere
-- DataAssunzione
+- IdInfermiere (Index 4)
+- DataAssunzione (Date 8)
 
 Paziente:  
-- IdPaziente
-- IdPatologia
-- IdResidenza
+- IdPaziente (Index 4)
+- IdPatologia (Index 4)
 
 Patologia:
-- IdPatologia
-- NomePatologia
-- Descrizione
+- IdPatologia (Index 4)
+- NomePatologia (Char 20)
+- Descrizione (Char 30)
 
 Vaccino:  
-- IdVaccino
-- Nome
-- CasaFarmaceutica
-- Richiamo(Pfizer -> 21gg, Moderna -> 28, Astrazeneca -> 63gg)
-- Info(mRNA -> Pfizer e Moderna, Vettore virale -> Astrazeneca)
-- PrezzoUnitario
-- IdFornitore
+- IdVaccino (Index 4)
+- Nome (Char 15)
+- CasaFarmaceutica (Char 20)
+- Richiamo(Pfizer -> 21gg, Moderna -> 28, Astrazeneca -> 63gg) (Numeric 3)
+- Info(mRNA -> Pfizer e Moderna, Vettore virale -> Astrazeneca) (Char 50)
+- PrezzoUnitario (Numeric 5)
+- IdFornitore (Index 4)
 
 Fornitore:  
-- IdFornitore
-- NomeFornitore
-- Telefono          
+- IdFornitore (Index 4)
+- NomeFornitore (Char 20)
+- Telefono (Numeric 10)          
 
 Dosi:
-- IdVaccino
-- TotDosi
+- IdDosi (Index 4)
+- TotDosi (Numeric 10)
 
 Vaccinazione:  
-- IdVaccinazione
-- IdPaziente
-- IdVaccino
-- IdInfermiere
-- DataEffettuazione
-- nRichiamo
-- DataRichiamo(opzionale)
+- IdVaccinazione (Index 4)
+- DataEffettuazione (Date 8)
+- nRichiamo (Numeric 1)
+- DataRichiamo (Date 8)
