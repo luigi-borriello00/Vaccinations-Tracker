@@ -1,1 +1,3 @@
-Valori campi, sesso(?)
+Residenza prima del collasso va collegata a paziente(4), rivedere su draw.io successivamente e relazione
+
+Riguarda relazione
