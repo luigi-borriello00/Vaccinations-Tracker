@@ -96,6 +96,8 @@ namespace OspedaleEVaccinazioni
             this.label31 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idNurseText = new System.Windows.Forms.TextBox();
+            this.NurseViewCombo = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -378,18 +380,18 @@ namespace OspedaleEVaccinazioni
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(424, 5);
+            this.label17.Location = new System.Drawing.Point(532, 25);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(350, 24);
+            this.label17.Size = new System.Drawing.Size(93, 24);
             this.label17.TabIndex = 35;
-            this.label17.Text = "Visualizza le Vaccinazioni da te effettuate";
+            this.label17.Text = "Visualizza";
             // 
             // vaccinationViewButton
             // 
             this.vaccinationViewButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.vaccinationViewButton.Location = new System.Drawing.Point(504, 72);
+            this.vaccinationViewButton.Location = new System.Drawing.Point(583, 67);
             this.vaccinationViewButton.Name = "vaccinationViewButton";
-            this.vaccinationViewButton.Size = new System.Drawing.Size(152, 42);
+            this.vaccinationViewButton.Size = new System.Drawing.Size(226, 47);
             this.vaccinationViewButton.TabIndex = 37;
             this.vaccinationViewButton.Text = "Visualizza";
             this.vaccinationViewButton.UseVisualStyleBackColor = false;
@@ -679,25 +681,47 @@ namespace OspedaleEVaccinazioni
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(362, 123);
+            this.dataGridView1.Location = new System.Drawing.Point(362, 131);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(447, 407);
+            this.dataGridView1.Size = new System.Drawing.Size(447, 427);
             this.dataGridView1.TabIndex = 80;
             // 
             // idNurseText
             // 
-            this.idNurseText.Location = new System.Drawing.Point(504, 46);
+            this.idNurseText.Location = new System.Drawing.Point(383, 94);
             this.idNurseText.Name = "idNurseText";
-            this.idNurseText.Size = new System.Drawing.Size(152, 20);
+            this.idNurseText.Size = new System.Drawing.Size(194, 20);
             this.idNurseText.TabIndex = 81;
-            this.idNurseText.Text = "Inserisci il tuo id";
+            this.idNurseText.Text = "Inserisci id";
             this.idNurseText.MouseClick += new System.Windows.Forms.MouseEventHandler(this.idNurseText_MouseClick);
+            // 
+            // NurseViewCombo
+            // 
+            this.NurseViewCombo.FormattingEnabled = true;
+            this.NurseViewCombo.Items.AddRange(new object[] {
+            "Vaccinazioni ricevute dal paziente (Specificato con Id)",
+            "Vaccinazioni effettuate dall\'Infermiere (Specificato con Id)"});
+            this.NurseViewCombo.Location = new System.Drawing.Point(362, 67);
+            this.NurseViewCombo.Name = "NurseViewCombo";
+            this.NurseViewCombo.Size = new System.Drawing.Size(215, 21);
+            this.NurseViewCombo.TabIndex = 82;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(359, 97);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(18, 13);
+            this.label23.TabIndex = 83;
+            this.label23.Text = "ID";
             // 
             // NurseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1273, 566);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.NurseViewCombo);
             this.Controls.Add(this.idNurseText);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker2);
@@ -844,5 +868,7 @@ namespace OspedaleEVaccinazioni
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox idNurseText;
+        private System.Windows.Forms.ComboBox NurseViewCombo;
+        private System.Windows.Forms.Label label23;
     }
 }
