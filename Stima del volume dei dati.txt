@@ -1,0 +1,21 @@
+CONCETTO        COSTRUTTO       VOLUME
+
+OSPEDALE        E                 1
+COMPRENDE       A               50.000
+PERSONA         E               50.000
+INFERMIERE      E                1.000
+PAZIENTE        E               49.000
+EFFETTUA        A               70.000
+VACCINAZIONE    E               70.000
+RICEVE          A               70.000
+VACCINO         E               80.000
+RICEVE(PAZ-VAC) A               70.000
+RISIEDE         A               49.000
+RESIDENZA       E               49.000
+POSSIEDE        A               20.000
+PATOLOGIA       E                 10
+FORNISCE        A               80.000
+FORNITORE       E                  5
+APPARTENENZA    A               80.000
+DOSI            E               80.000
+GIACENZA(OSP)   A               10.000
