@@ -3,16 +3,17 @@
 -- *--------------------------------------------
 -- * DB-MAIN version: 11.0.1              
 -- * Generator date: Dec  4 2018              
--- * Generation date: Sun Jun 20 11:48:30 2021 
--- * LUN file: C:\Users\Luigi\Desktop\Progetto.lun 
--- * Schema: Logic/SQL1 
+-- * Generation date: Sun Jun 20 15:06:44 2021 
+-- * LUN file: C:\Users\Luigi\Desktop\Uni\2° Anno\Basi di Dati\progetto\progettoBasiDiDati\DB-Main\Progetto.lun 
+-- * Schema: Covid-19 Vaccine Tracker/SQL 
 -- ********************************************* 
 
 
 -- Database Section
 -- ________________ 
 
-create database COVID19Tracker;
+create database Covid19VaccineTracker;
+use Covid19VaccineTracker;
 
 
 -- DBSpace Section
@@ -31,7 +32,7 @@ create table DOSI (
 create table FORNITORE (
      IdFornitore int not null AUTO_INCREMENT,
      NomeFornitore char(20) not null,
-     Telefono int not null,
+     Telefono varchar(15) not null,
      IdVaccino int not null,
      constraint ID_FORNITORE_ID primary key (IdFornitore));
 
@@ -39,7 +40,7 @@ create table OSPEDALE (
      IdOspedale int not null AUTO_INCREMENT,
      Nome char(15) not null,
      Indirizzo char(30) not null,
-     Telefono int not null,
+     Telefono varchar(15) not null,
      IdDirettore int not null,
      constraint ID_OSPEDALE_ID primary key (IdOspedale));
 
@@ -50,13 +51,13 @@ create table PATOLOGIA (
      constraint ID_PATOLOGIA_ID primary key (IdPatologia));
 
 create table PAZIENTE (
-     IdPaziente char(1) not null AUTO_INCREMENT,
+     IdPaziente int not null AUTO_INCREMENT,
      Nome char(15) not null,
      Cognome char(15) not null,
      DataNascita date not null,
      Sesso char(1) not null,
      CodFiscale varchar(16) not null,
-     Telefono int not null,
+     Telefono varchar(15) not null,
      Mail varchar(30) not null,
      IdResidenza int not null,
      IdVaccino int not null,
@@ -71,7 +72,7 @@ create table INFERMIERE (
      DataNascita date not null,
      Sesso char(1) not null,
      CodFiscale varchar(16) not null,
-     Telefono int not null,
+     Telefono varchar(15) not null,
      Mail varchar(30) not null,
      DataAssunzione date not null,
      IdOspedale int not null,
@@ -86,20 +87,20 @@ create table RESIDENZA (
      constraint ID_RESIDENZA_ID primary key (IdResidenza));
 
 create table VACCINAZIONE (
-     IdPaziente char(1) not null,
      DataEffettuazione date not null,
      nRichiamo int not null,
      DataRichiamo date not null,
+     IdPaziente int not null,
      IdInfermiere int not null,
-     constraint ID_VACCINAZIONE_ID primary key (IdPaziente, DataEffettuazione));
+     constraint ID_VACCINAZIONE_ID primary key (DataEffettuazione));
 
 create table VACCINO (
      IdVaccino int not null AUTO_INCREMENT,
      Nome char(15) not null,
      CasaFarmaceutica char(20) not null,
-     Richiamo int not null,
+     Richiamo int(3) not null,
      Info char(50) not null,
-     PrezzoUnitario int not null,
+     PrezzoUnitario int(5) not null,
      constraint ID_VACCINO_ID primary key (IdVaccino));
 
 
@@ -108,47 +109,43 @@ create table VACCINO (
 
 alter table DOSI add constraint REF_DOSI_OSPED_FK
      foreign key (IdOspedale)
-     references OSPEDALE;
+     references OSPEDALE(IdOspedale);
 
 alter table DOSI add constraint REF_DOSI_VACCI
      foreign key (IdVaccino)
-     references VACCINO;
+     references VACCINO(IdVaccino);
 
 alter table FORNITORE add constraint REF_FORNI_VACCI_FK
      foreign key (IdVaccino)
-     references VACCINO;
-
-alter table PAZIENTE add constraint ID_PAZIENTE_CHK
-     check(exists(select * from VACCINAZIONE
-                  where VACCINAZIONE.IdPaziente = IdPaziente)); 
+     references VACCINO(IdVaccino);
 
 alter table PAZIENTE add constraint REF_PAZIE_RESID_FK
      foreign key (IdResidenza)
-     references RESIDENZA;
+     references RESIDENZA(IdResidenza);
 
 alter table PAZIENTE add constraint REF_PAZIE_VACCI_FK
      foreign key (IdVaccino)
-     references VACCINO;
+     references VACCINO(IdVaccino);
 
 alter table PAZIENTE add constraint REF_PAZIE_PATOL_FK
      foreign key (IdPatologia)
-     references PATOLOGIA;
+     references PATOLOGIA(IdPatologia);
 
 alter table PAZIENTE add constraint REF_PAZIE_OSPED_FK
      foreign key (IdOspedale)
-     references OSPEDALE;
+     references OSPEDALE(IdOspedale);
 
 alter table INFERMIERE add constraint REF_INFER_OSPED_FK
      foreign key (IdOspedale)
-     references OSPEDALE;
+     references OSPEDALE(IdOspedale);
 
-alter table VACCINAZIONE add constraint EQU_VACCI_PAZIE
+alter table VACCINAZIONE add constraint REF_VACCI_PAZIE_FK
      foreign key (IdPaziente)
-     references PAZIENTE;
+     references PAZIENTE(IdPaziente);
 
 alter table VACCINAZIONE add constraint REF_VACCI_INFER_FK
      foreign key (IdInfermiere)
-     references INFERMIERE;
+     references INFERMIERE(IdInfermiere);
 
 
 -- Index Section
@@ -197,7 +194,10 @@ create unique index ID_RESIDENZA_IND
      on RESIDENZA (IdResidenza);
 
 create unique index ID_VACCINAZIONE_IND
-     on VACCINAZIONE (IdPaziente, DataEffettuazione);
+     on VACCINAZIONE (DataEffettuazione);
+
+create index REF_VACCI_PAZIE_IND
+     on VACCINAZIONE (IdPaziente);
 
 create index REF_VACCI_INFER_IND
      on VACCINAZIONE (IdInfermiere);
