@@ -6,7 +6,7 @@ Ospedale:
 - IdDirettore (Index 4)
 
 Persona:  
-- IdPersona (Index 4)
+- IdPersona (Index 4
 - Nome (Char 15)
 - Cognome (Char 15)
 - DataNascita (Date 8)
@@ -25,6 +25,7 @@ Residenza:
 
 Infermiere:  
 - IdInfermiere (Index 4)
+- IdOspedale
 - DataAssunzione (Date 8)
 
 Paziente:  
@@ -48,11 +49,13 @@ Vaccino:
 Fornitore:  
 - IdFornitore (Index 4)
 - NomeFornitore (Char 20)
-- Telefono (Numeric 10)          
+- Telefono (Numeric 10)    
+- IdVaccino       
 
 Dosi:
 - IdDosi (Index 4)
 - TotDosi (Numeric 10)
+
 
 Vaccinazione:  
 - IdVaccinazione (Index 4)

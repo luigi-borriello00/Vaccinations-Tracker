@@ -5,10 +5,16 @@ Elenco principali azioni per gli infermieri:
 - Visualizzazione dei vaccinati a seconda dell'infermiere che ha somministrato il vaccino.
 
 Elenco principali azioni per il direttore:
-- Visualizzazione delle vaccinazioni effettuate in un determinato giorno.
-- Inserimento di un nuovo infermiere.
-- Visualizzazione dei pazienti vaccinati.
-- Visualizzazione del numero di vaccinati per ogni città registrata.
-- Visualizzazione delle scorte in magazzino relative ai vari vaccini.
+- Visualizzazione delle vaccinazioni effettuate in un determinato giorno. (FATTA)
+- Inserimento di un nuovo infermiere. (FATTA)
+- Visualizzazione dei pazienti vaccinati. (FATTA)
+- Visualizzazione del numero di vaccinati per ogni città registrata. (FATTA)
+- Visualizzazione delle scorte in magazzino relative ai vari vaccini. ()
 - Inserimento di nuove scorte di vaccini nel magazzino.
 - Visualizzazione delle informazioni relative ai fornitori dei vari vaccini.
+
+
+Aggiungere:
+- TotPazienti con una precisa patologia
+- Infermiere che ha effettuato più vaccinazioni in un mese
+- Totale Pfizer/Moderna/Astrazeneca fatti in un mese
