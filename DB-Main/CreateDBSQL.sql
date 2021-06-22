@@ -91,13 +91,13 @@ create table VACCINAZIONE (
      DataRichiamo date not null,
      IdPaziente int not null,
      IdInfermiere int not null,
-     constraint ID_VACCINAZIONE_ID primary key (DataEffettuazione));
+     constraint ID_VACCINAZIONE_ID primary key (DataEffettuazione, IdPaziente));
 
 create table VACCINO (
      IdVaccino int not null AUTO_INCREMENT,
      Nome char(15) not null,
      CasaFarmaceutica char(20) not null,
-     Richiamo int(3) not null,
+     Richiamo int not null,
      Info char(50) not null,
      PrezzoUnitario int(5) not null,
      constraint ID_VACCINO_ID primary key (IdVaccino));
@@ -193,7 +193,7 @@ create unique index ID_RESIDENZA_IND
      on RESIDENZA (IdResidenza);
 
 create unique index ID_VACCINAZIONE_IND
-     on VACCINAZIONE (DataEffettuazione);
+     on VACCINAZIONE (DataEffettuazione, IdPaziente);
 
 create index REF_VACCI_PAZIE_IND
      on VACCINAZIONE (IdPaziente);
