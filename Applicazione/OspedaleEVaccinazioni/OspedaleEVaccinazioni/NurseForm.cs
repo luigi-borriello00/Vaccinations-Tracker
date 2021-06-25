@@ -40,7 +40,6 @@ namespace OspedaleEVaccinazioni
 
         private void DeletePatient_Click(object sender, EventArgs e)
         {
-            this.idPatient.Text = "";
             this.namePatient.Text = "";
             this.surnamePatient.Text = "";
             this.codPatient.Text = "";
@@ -56,7 +55,6 @@ namespace OspedaleEVaccinazioni
 
         private void DeleteResidence_Click(object sender, EventArgs e)
         {
-            this.idResidence.Text = "";
             this.city.Text = "";
             this.province.Text = "";
             this.cap.Text = "";
@@ -74,9 +72,7 @@ namespace OspedaleEVaccinazioni
 
         private void deletePathology_Click(object sender, EventArgs e)
         {
-            this.idPathology.Text = "";
             this.namePathology.Text = "";
-            this.descPathology.Text = "";
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

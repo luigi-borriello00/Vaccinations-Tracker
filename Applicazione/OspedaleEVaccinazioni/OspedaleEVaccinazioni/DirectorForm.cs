@@ -43,7 +43,6 @@ namespace OspedaleEVaccinazioni
 
         private void DeletePatient_Click(object sender, EventArgs e)
         {
-            this.idInfermiere.Text = "";
             this.nameNurse.Text = "";
             this.surnameNurse.Text = "";
             this.codNurse.Text = "";
@@ -53,7 +52,6 @@ namespace OspedaleEVaccinazioni
 
         private void residenceDelete_Click(object sender, EventArgs e)
         {
-            this.residenceId.Text = "";
             this.residenceName.Text = "";
             this.residenceProv.Text = "";
         }
