@@ -40,7 +40,7 @@ from infermiere I join vaccinazione V on I.IdInfermiere = V.IdInfermiere
 group by I.Nome
 having count(*) > 1;
 
-/* Vaccinazioni vaccino per vaccino */
+/* Numero vaccinazioni vaccino per vaccino */
 select count(*) as "N° vaccini effettuati", VC.Nome as "Vaccino"
 from vaccinazione V join paziente P on V.IdPaziente = P.IdPaziente join vaccino VC on VC.IdVaccino = P.IdVaccino
 group by VC.Nome;
