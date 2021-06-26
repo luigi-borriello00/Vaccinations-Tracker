@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 9.75" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5831784c-4098-4fd5-be4d-4a06103f412f" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesDataContext/dosi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53fa8efe-c72c-4420-859e-c0be83a76a92" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f92fb33-c76b-47ac-aff2-57ecb554b42b" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/fornitore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="942f5649-2ec1-4860-b19c-881329a3b96d" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ac2e50a9-ae95-4033-b653-51551257186f" absoluteBounds="0.75, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DataClassesDataContext/infermiere" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce051985-284b-4b79-b06e-6e74b6f5d14c" absoluteBounds="0.765, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f83de90-e279-47f2-8173-fc8b61872ec4" absoluteBounds="3.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/ospedale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50a131c4-5a00-415a-8acb-33b2940125cf" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee2dd492-35c8-4df7-b006-a9bb3130de77" absoluteBounds="6.75, 0.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/DataClassesDataContext/paziente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8bdfef3-3c44-410f-8f5e-130d5108e0de" absoluteBounds="6.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70215aca-867f-4762-b85b-00c314f45ed1" absoluteBounds="3.75, 6.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesDataContext/patologia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5be9623-ec40-4651-8aad-3c3c5b78fb0d" absoluteBounds="3.765, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cff4d551-34e4-4edc-af56-c627f0b8622d" absoluteBounds="6.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataClassesDataContext/residenza" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4682840-58f7-4734-8baf-655d8ad77ff7" absoluteBounds="6.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="75c0a4da-e534-4fed-98f7-7f9461298c7a" absoluteBounds="6.75, 7.75, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/DataClassesDataContext/vaccinazione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="411b5ea5-4ac3-4648-a21b-bab01a319327" absoluteBounds="6.765, 8.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d7ec385-4276-44e3-95e3-49adef21a33a" absoluteBounds="9.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/DataClassesDataContext/vaccino" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8268823-c4fd-4f21-bf59-220a7b0668fb" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

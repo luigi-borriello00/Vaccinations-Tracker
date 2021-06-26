@@ -36,13 +36,11 @@ namespace OspedaleEVaccinazioni
 
         private void stocksDelete_Click(object sender, EventArgs e)
         {
-            this.stocksId.Text = "";
             this.stocksNumber.Text = "";
         }
 
         private void vaccineDelete_Click(object sender, EventArgs e)
         {
-            this.vaccineId.Text = "";
             this.vaccineInfo.Text = "";
             this.vaccineName.Text = "";
             this.vaccinePrice.Text = "";
