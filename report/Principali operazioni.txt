@@ -1,20 +1,35 @@
-Elenco principali azioni per gli infermieri:
-- Inserimento di una nuova Residenza.
-- Inserimento di una nuova vaccinazione.
-- Inserimento di un nuovo paziente.
-- Visualizzazione dei vaccinati a seconda dell'infermiere che ha somministrato il vaccino.
 
-Elenco principali azioni per il direttore:
-- Visualizzazione delle vaccinazioni effettuate in un determinato giorno. (FATTA)
-- Inserimento di un nuovo infermiere. (FATTA)
-- Visualizzazione dei pazienti vaccinati. (FATTA)
-- Visualizzazione del numero di vaccinati per ogni città registrata. (FATTA)
-- Visualizzazione delle scorte in magazzino relative ai vari vaccini. ()
-- Inserimento di nuove scorte di vaccini nel magazzino.
-- Visualizzazione delle informazioni relative ai fornitori dei vari vaccini.
+1) Inserimento di una nuova residenza.
+2) Inserimento di una nuova vaccinazione.
+3) Inserimento di un nuovo paziente.
+4) Inserimento di nuove scorte di vaccini nel magazzino.
+5) Vaccinazioni effettuate in un giorno. 
+6) Pazienti vaccinati. 
+7) Numero vaccinati per ogni residenza. 
+8) Aumento totVaccinati di una città identificata tramite Id. 
+9) Visualizzazione vaccinati per ogni infermiere. 
+10) Visualizzazione pazienti malati di "tumore". 
+11) Infermieri che ha eseguito piu vaccinazioni. 
+12) Infermieri che hanno effettuato piu di 1 vaccino. 
+13) Numero di vaccinazioni effettuate, vaccino per vaccino. 
+14) Visualizzazione scorte magazzino. 
+15) Totale pazienti con una precisa patologia. 
+16) Visualizzazione info fornitori collegate ad uno specifico vaccino. 
 
-
-Aggiungere:
-- TotPazienti con una precisa patologia
-- Infermiere che ha effettuato più vaccinazioni in un mese
-- Totale Pfizer/Moderna/Astrazeneca fatti in un mese
+Frequenza
+1)  20 volte al mese
+2) 500 volte al giorno
+3) 300 volte al giorno
+4) 3 volte al giorno
+5) 1 volta al giorno
+6) 1 volta al giorno
+7) 2 volte a settimana
+8) 300 volte al giorno
+9) 1 volta al mese
+10) 1 volta al mese
+11) 1 volta a settimana
+12) 1 volta al giorno
+13) 1 volta al giorno
+14) 5 volte al giorno
+15) 1 volta al mese
+16) 2 volte a settimana
