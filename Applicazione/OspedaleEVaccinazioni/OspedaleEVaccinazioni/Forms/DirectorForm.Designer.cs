@@ -29,11 +29,11 @@ namespace OspedaleEVaccinazioni
         /// </summary>
         private void InitializeComponent()
         {
-            this.genderPatient = new System.Windows.Forms.ComboBox();
+            this.genderNurse = new System.Windows.Forms.ComboBox();
             this.residenceNurse = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.DeletePatient = new System.Windows.Forms.Button();
-            this.InsertPatient = new System.Windows.Forms.Button();
+            this.InsertNurse = new System.Windows.Forms.Button();
             this.mailNurse = new System.Windows.Forms.TextBox();
             this.nameNurse = new System.Windows.Forms.TextBox();
             this.surnameNurse = new System.Windows.Forms.TextBox();
@@ -62,25 +62,24 @@ namespace OspedaleEVaccinazioni
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.choiceDirector = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dirButton = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateVaccination = new System.Windows.Forms.DateTimePicker();
-            this.label23 = new System.Windows.Forms.Label();
-            this.idNurseText = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridDir = new System.Windows.Forms.DataGridView();
+            this.dateDir = new System.Windows.Forms.DateTimePicker();
+            this.idDirText = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDir)).BeginInit();
             this.SuspendLayout();
             // 
-            // genderPatient
+            // genderNurse
             // 
-            this.genderPatient.FormattingEnabled = true;
-            this.genderPatient.Items.AddRange(new object[] {
+            this.genderNurse.FormattingEnabled = true;
+            this.genderNurse.Items.AddRange(new object[] {
             "Maschio",
             "Femmina"});
-            this.genderPatient.Location = new System.Drawing.Point(89, 163);
-            this.genderPatient.Name = "genderPatient";
-            this.genderPatient.Size = new System.Drawing.Size(140, 21);
-            this.genderPatient.TabIndex = 68;
+            this.genderNurse.Location = new System.Drawing.Point(89, 163);
+            this.genderNurse.Name = "genderNurse";
+            this.genderNurse.Size = new System.Drawing.Size(140, 21);
+            this.genderNurse.TabIndex = 68;
             // 
             // residenceNurse
             // 
@@ -112,15 +111,16 @@ namespace OspedaleEVaccinazioni
             this.DeletePatient.UseVisualStyleBackColor = false;
             this.DeletePatient.Click += new System.EventHandler(this.DeletePatient_Click);
             // 
-            // InsertPatient
+            // InsertNurse
             // 
-            this.InsertPatient.BackColor = System.Drawing.Color.Lime;
-            this.InsertPatient.Location = new System.Drawing.Point(253, 87);
-            this.InsertPatient.Name = "InsertPatient";
-            this.InsertPatient.Size = new System.Drawing.Size(75, 23);
-            this.InsertPatient.TabIndex = 57;
-            this.InsertPatient.Text = "Inserisci";
-            this.InsertPatient.UseVisualStyleBackColor = false;
+            this.InsertNurse.BackColor = System.Drawing.Color.Lime;
+            this.InsertNurse.Location = new System.Drawing.Point(253, 87);
+            this.InsertNurse.Name = "InsertNurse";
+            this.InsertNurse.Size = new System.Drawing.Size(75, 23);
+            this.InsertNurse.TabIndex = 57;
+            this.InsertNurse.Text = "Inserisci";
+            this.InsertNurse.UseVisualStyleBackColor = false;
+            this.InsertNurse.Click += new System.EventHandler(this.InsertNurse_Click);
             // 
             // mailNurse
             // 
@@ -269,6 +269,7 @@ namespace OspedaleEVaccinazioni
             this.residenceInsert.TabIndex = 83;
             this.residenceInsert.Text = "Inserisci";
             this.residenceInsert.UseVisualStyleBackColor = false;
+            this.residenceInsert.Click += new System.EventHandler(this.residenceInsert_Click);
             // 
             // label20
             // 
@@ -359,21 +360,27 @@ namespace OspedaleEVaccinazioni
             // 
             this.choiceDirector.FormattingEnabled = true;
             this.choiceDirector.Items.AddRange(new object[] {
-            "Vaccinazioni"});
-            this.choiceDirector.Location = new System.Drawing.Point(381, 75);
+            "Vaccinazioni effettuate in un determinato giorno (specificare la data).",
+            "Numero di vaccinati per ogni città registrata.",
+            "Infermiere che ha effettuato più vaccinazioni.",
+            "Infermiere che ha effettuato più vaccinazioni in un mese (specificare data).",
+            "Infermieri che hanno eseguito più di TOT vaccinazioni (specificare il n°).",
+            "Totale Pfizer/Moderna/Astrazeneca fatti mese per mese."});
+            this.choiceDirector.Location = new System.Drawing.Point(381, 49);
             this.choiceDirector.Name = "choiceDirector";
             this.choiceDirector.Size = new System.Drawing.Size(423, 21);
             this.choiceDirector.TabIndex = 111;
             this.choiceDirector.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button1
+            // dirButton
             // 
-            this.button1.Location = new System.Drawing.Point(810, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 77);
-            this.button1.TabIndex = 110;
-            this.button1.Text = "Visualizza";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dirButton.Location = new System.Drawing.Point(810, 47);
+            this.dirButton.Name = "dirButton";
+            this.dirButton.Size = new System.Drawing.Size(65, 77);
+            this.dirButton.TabIndex = 110;
+            this.dirButton.Text = "Visualizza";
+            this.dirButton.UseVisualStyleBackColor = true;
+            this.dirButton.Click += new System.EventHandler(this.dirButton_Click);
             // 
             // label16
             // 
@@ -385,50 +392,40 @@ namespace OspedaleEVaccinazioni
             this.label16.TabIndex = 109;
             this.label16.Text = "Scegli cosa visualizzare";
             // 
-            // dataGridView1
+            // dataGridDir
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(381, 130);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(494, 329);
-            this.dataGridView1.TabIndex = 108;
+            this.dataGridDir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDir.Location = new System.Drawing.Point(381, 130);
+            this.dataGridDir.Name = "dataGridDir";
+            this.dataGridDir.Size = new System.Drawing.Size(494, 329);
+            this.dataGridDir.TabIndex = 108;
+            this.dataGridDir.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDir_CellContentClick);
             // 
-            // dateVaccination
+            // dateDir
             // 
-            this.dateVaccination.Location = new System.Drawing.Point(381, 101);
-            this.dateVaccination.Name = "dateVaccination";
-            this.dateVaccination.Size = new System.Drawing.Size(423, 20);
-            this.dateVaccination.TabIndex = 112;
+            this.dateDir.Location = new System.Drawing.Point(381, 101);
+            this.dateDir.Name = "dateDir";
+            this.dateDir.Size = new System.Drawing.Size(423, 20);
+            this.dateDir.TabIndex = 112;
             // 
-            // label23
+            // idDirText
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(383, 52);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(18, 13);
-            this.label23.TabIndex = 114;
-            this.label23.Text = "ID";
-            // 
-            // idNurseText
-            // 
-            this.idNurseText.Location = new System.Drawing.Point(407, 49);
-            this.idNurseText.Name = "idNurseText";
-            this.idNurseText.Size = new System.Drawing.Size(397, 20);
-            this.idNurseText.TabIndex = 113;
-            this.idNurseText.Text = "Inserisci id";
+            this.idDirText.Location = new System.Drawing.Point(381, 75);
+            this.idDirText.Name = "idDirText";
+            this.idDirText.Size = new System.Drawing.Size(423, 20);
+            this.idDirText.TabIndex = 113;
             // 
             // DirectorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 517);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.idNurseText);
-            this.Controls.Add(this.dateVaccination);
+            this.Controls.Add(this.idDirText);
+            this.Controls.Add(this.dateDir);
             this.Controls.Add(this.choiceDirector);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dirButton);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridDir);
             this.Controls.Add(this.residenceName);
             this.Controls.Add(this.residenceProv);
             this.Controls.Add(this.residenceCap);
@@ -443,11 +440,11 @@ namespace OspedaleEVaccinazioni
             this.Controls.Add(this.label20);
             this.Controls.Add(this.bdDate);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.genderPatient);
+            this.Controls.Add(this.genderNurse);
             this.Controls.Add(this.residenceNurse);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.DeletePatient);
-            this.Controls.Add(this.InsertPatient);
+            this.Controls.Add(this.InsertNurse);
             this.Controls.Add(this.mailNurse);
             this.Controls.Add(this.nameNurse);
             this.Controls.Add(this.surnameNurse);
@@ -466,18 +463,18 @@ namespace OspedaleEVaccinazioni
             this.Text = "DirectorForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DirectorForm_FormClosing);
             this.Load += new System.EventHandler(this.DirectorForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox genderPatient;
+        private System.Windows.Forms.ComboBox genderNurse;
         private System.Windows.Forms.ComboBox residenceNurse;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button DeletePatient;
-        private System.Windows.Forms.Button InsertPatient;
+        private System.Windows.Forms.Button InsertNurse;
         private System.Windows.Forms.TextBox mailNurse;
         private System.Windows.Forms.TextBox nameNurse;
         private System.Windows.Forms.TextBox surnameNurse;
@@ -506,11 +503,10 @@ namespace OspedaleEVaccinazioni
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox choiceDirector;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button dirButton;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateVaccination;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox idNurseText;
+        private System.Windows.Forms.DataGridView dataGridDir;
+        private System.Windows.Forms.DateTimePicker dateDir;
+        private System.Windows.Forms.TextBox idDirText;
     }
 }

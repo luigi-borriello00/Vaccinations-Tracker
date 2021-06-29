@@ -29,6 +29,7 @@ namespace OspedaleEVaccinazioni
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,6 +47,8 @@ namespace OspedaleEVaccinazioni
             this.DeletePatient = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.residencePatient = new System.Windows.Forms.ComboBox();
+            this.residenzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.covid19TrackerDataSet2 = new OspedaleEVaccinazioni.Covid19TrackerDataSet2();
             this.label11 = new System.Windows.Forms.Label();
             this.city = new System.Windows.Forms.TextBox();
             this.province = new System.Windows.Forms.TextBox();
@@ -60,6 +63,8 @@ namespace OspedaleEVaccinazioni
             this.vaccinationViewButton = new System.Windows.Forms.Button();
             this.goBack = new System.Windows.Forms.Button();
             this.pathologyBox = new System.Windows.Forms.ComboBox();
+            this.patologiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.covid19TrackerDataSet3 = new OspedaleEVaccinazioni.Covid19TrackerDataSet3();
             this.label18 = new System.Windows.Forms.Label();
             this.deletePathology = new System.Windows.Forms.Button();
             this.insertPathology = new System.Windows.Forms.Button();
@@ -68,31 +73,55 @@ namespace OspedaleEVaccinazioni
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.vaccineBox = new System.Windows.Forms.ComboBox();
+            this.vaccinoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.covid19TrackerDataSet1 = new OspedaleEVaccinazioni.Covid19TrackerDataSet1();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.vaccinationDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datePatient = new System.Windows.Forms.DateTimePicker();
             this.nurseCombo = new System.Windows.Forms.ComboBox();
+            this.infermiereBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.covid19TrackerDataSet4 = new OspedaleEVaccinazioni.Covid19TrackerDataSet4();
             this.label26 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.recallDelete = new System.Windows.Forms.Button();
+            this.recallInsert = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.patientCombo = new System.Windows.Forms.ComboBox();
+            this.pazienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.covid19TrackerDataSet5 = new OspedaleEVaccinazioni.Covid19TrackerDataSet5();
+            this.comboNurse = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.recallDate = new System.Windows.Forms.DateTimePicker();
+            this.recallNumber = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nurseGridView = new System.Windows.Forms.DataGridView();
             this.idNurseText = new System.Windows.Forms.TextBox();
-            this.NurseViewCombo = new System.Windows.Forms.ComboBox();
+            this.nurseViewCombo = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.patologyDesc = new System.Windows.Forms.RichTextBox();
+            this.covid19TrackerDataSet = new OspedaleEVaccinazioni.Covid19TrackerDataSet();
+            this.vaccinoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vaccinoTableAdapter = new OspedaleEVaccinazioni.Covid19TrackerDataSetTableAdapters.vaccinoTableAdapter();
+            this.vaccinoTableAdapter1 = new OspedaleEVaccinazioni.Covid19TrackerDataSet1TableAdapters.vaccinoTableAdapter();
+            this.residenzaTableAdapter = new OspedaleEVaccinazioni.Covid19TrackerDataSet2TableAdapters.residenzaTableAdapter();
+            this.patologiaTableAdapter = new OspedaleEVaccinazioni.Covid19TrackerDataSet3TableAdapters.patologiaTableAdapter();
+            this.infermiereTableAdapter = new OspedaleEVaccinazioni.Covid19TrackerDataSet4TableAdapters.infermiereTableAdapter();
+            this.pazienteTableAdapter = new OspedaleEVaccinazioni.Covid19TrackerDataSet5TableAdapters.pazienteTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.residenzaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patologiaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaccinoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infermiereBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pazienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nurseGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaccinoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -239,11 +268,24 @@ namespace OspedaleEVaccinazioni
             // 
             // residencePatient
             // 
+            this.residencePatient.DataSource = this.residenzaBindingSource;
+            this.residencePatient.DisplayMember = "Citta";
             this.residencePatient.FormattingEnabled = true;
             this.residencePatient.Location = new System.Drawing.Point(89, 299);
             this.residencePatient.Name = "residencePatient";
             this.residencePatient.Size = new System.Drawing.Size(140, 21);
             this.residencePatient.TabIndex = 20;
+            this.residencePatient.ValueMember = "IdResidenza";
+            // 
+            // residenzaBindingSource
+            // 
+            this.residenzaBindingSource.DataMember = "residenza";
+            this.residenzaBindingSource.DataSource = this.covid19TrackerDataSet2;
+            // 
+            // covid19TrackerDataSet2
+            // 
+            this.covid19TrackerDataSet2.DataSetName = "Covid19TrackerDataSet2";
+            this.covid19TrackerDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label11
             // 
@@ -351,9 +393,9 @@ namespace OspedaleEVaccinazioni
             // vaccinationViewButton
             // 
             this.vaccinationViewButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.vaccinationViewButton.Location = new System.Drawing.Point(583, 41);
+            this.vaccinationViewButton.Location = new System.Drawing.Point(583, 68);
             this.vaccinationViewButton.Name = "vaccinationViewButton";
-            this.vaccinationViewButton.Size = new System.Drawing.Size(226, 47);
+            this.vaccinationViewButton.Size = new System.Drawing.Size(226, 20);
             this.vaccinationViewButton.TabIndex = 37;
             this.vaccinationViewButton.Text = "Visualizza";
             this.vaccinationViewButton.UseVisualStyleBackColor = false;
@@ -371,11 +413,24 @@ namespace OspedaleEVaccinazioni
             // 
             // pathologyBox
             // 
+            this.pathologyBox.DataSource = this.patologiaBindingSource;
+            this.pathologyBox.DisplayMember = "NomePatologia";
             this.pathologyBox.FormattingEnabled = true;
             this.pathologyBox.Location = new System.Drawing.Point(89, 336);
             this.pathologyBox.Name = "pathologyBox";
             this.pathologyBox.Size = new System.Drawing.Size(140, 21);
             this.pathologyBox.TabIndex = 40;
+            this.pathologyBox.ValueMember = "IdPatologia";
+            // 
+            // patologiaBindingSource
+            // 
+            this.patologiaBindingSource.DataMember = "patologia";
+            this.patologiaBindingSource.DataSource = this.covid19TrackerDataSet3;
+            // 
+            // covid19TrackerDataSet3
+            // 
+            this.covid19TrackerDataSet3.DataSetName = "Covid19TrackerDataSet3";
+            this.covid19TrackerDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label18
             // 
@@ -408,6 +463,7 @@ namespace OspedaleEVaccinazioni
             this.insertPathology.TabIndex = 48;
             this.insertPathology.Text = "Inserisci";
             this.insertPathology.UseVisualStyleBackColor = false;
+            this.insertPathology.Click += new System.EventHandler(this.insertPathology_Click);
             // 
             // namePathology
             // 
@@ -447,11 +503,24 @@ namespace OspedaleEVaccinazioni
             // 
             // vaccineBox
             // 
+            this.vaccineBox.DataSource = this.vaccinoBindingSource1;
+            this.vaccineBox.DisplayMember = "Nome";
             this.vaccineBox.FormattingEnabled = true;
             this.vaccineBox.Location = new System.Drawing.Point(89, 407);
             this.vaccineBox.Name = "vaccineBox";
             this.vaccineBox.Size = new System.Drawing.Size(140, 21);
             this.vaccineBox.TabIndex = 53;
+            this.vaccineBox.ValueMember = "IdVaccino";
+            // 
+            // vaccinoBindingSource1
+            // 
+            this.vaccinoBindingSource1.DataMember = "vaccino";
+            this.vaccinoBindingSource1.DataSource = this.covid19TrackerDataSet1;
+            // 
+            // covid19TrackerDataSet1
+            // 
+            this.covid19TrackerDataSet1.DataSetName = "Covid19TrackerDataSet1";
+            this.covid19TrackerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label24
             // 
@@ -478,20 +547,33 @@ namespace OspedaleEVaccinazioni
             this.vaccinationDate.Size = new System.Drawing.Size(140, 20);
             this.vaccinationDate.TabIndex = 56;
             // 
-            // dateTimePicker1
+            // datePatient
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(89, 116);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(140, 20);
-            this.dateTimePicker1.TabIndex = 57;
+            this.datePatient.Location = new System.Drawing.Point(89, 116);
+            this.datePatient.Name = "datePatient";
+            this.datePatient.Size = new System.Drawing.Size(140, 20);
+            this.datePatient.TabIndex = 57;
             // 
             // nurseCombo
             // 
+            this.nurseCombo.DataSource = this.infermiereBindingSource;
+            this.nurseCombo.DisplayMember = "IdInfermiere";
             this.nurseCombo.FormattingEnabled = true;
             this.nurseCombo.Location = new System.Drawing.Point(89, 442);
             this.nurseCombo.Name = "nurseCombo";
             this.nurseCombo.Size = new System.Drawing.Size(140, 21);
             this.nurseCombo.TabIndex = 59;
+            this.nurseCombo.ValueMember = "IdInfermiere";
+            // 
+            // infermiereBindingSource
+            // 
+            this.infermiereBindingSource.DataMember = "infermiere";
+            this.infermiereBindingSource.DataSource = this.covid19TrackerDataSet4;
+            // 
+            // covid19TrackerDataSet4
+            // 
+            this.covid19TrackerDataSet4.DataSetName = "Covid19TrackerDataSet4";
+            this.covid19TrackerDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label26
             // 
@@ -502,32 +584,34 @@ namespace OspedaleEVaccinazioni
             this.label26.TabIndex = 58;
             this.label26.Text = "IdInfermiere";
             // 
-            // button1
+            // recallDelete
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(1087, 361);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 70;
-            this.button1.Text = "Cancella";
-            this.button1.UseVisualStyleBackColor = false;
+            this.recallDelete.BackColor = System.Drawing.Color.Red;
+            this.recallDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.recallDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.recallDelete.Location = new System.Drawing.Point(1087, 388);
+            this.recallDelete.Name = "recallDelete";
+            this.recallDelete.Size = new System.Drawing.Size(75, 23);
+            this.recallDelete.TabIndex = 70;
+            this.recallDelete.Text = "Cancella";
+            this.recallDelete.UseVisualStyleBackColor = false;
+            this.recallDelete.Click += new System.EventHandler(this.recallDelete_Click);
             // 
-            // button2
+            // recallInsert
             // 
-            this.button2.BackColor = System.Drawing.Color.Lime;
-            this.button2.Location = new System.Drawing.Point(1087, 401);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 69;
-            this.button2.Text = "Inserisci";
-            this.button2.UseVisualStyleBackColor = false;
+            this.recallInsert.BackColor = System.Drawing.Color.Lime;
+            this.recallInsert.Location = new System.Drawing.Point(1087, 428);
+            this.recallInsert.Name = "recallInsert";
+            this.recallInsert.Size = new System.Drawing.Size(75, 23);
+            this.recallInsert.TabIndex = 69;
+            this.recallInsert.Text = "Inserisci";
+            this.recallInsert.UseVisualStyleBackColor = false;
+            this.recallInsert.Click += new System.EventHandler(this.recallInsert_Click);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(856, 366);
+            this.label16.Location = new System.Drawing.Point(856, 393);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(57, 13);
             this.label16.TabIndex = 64;
@@ -537,93 +621,92 @@ namespace OspedaleEVaccinazioni
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(865, 327);
+            this.label30.Location = new System.Drawing.Point(865, 354);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(170, 24);
             this.label30.TabIndex = 60;
             this.label30.Text = "Aggiungi Richiamo";
             // 
-            // comboBox1
+            // patientCombo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(919, 360);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(143, 21);
-            this.comboBox1.TabIndex = 71;
+            this.patientCombo.DataSource = this.pazienteBindingSource;
+            this.patientCombo.DisplayMember = "IdPaziente";
+            this.patientCombo.FormattingEnabled = true;
+            this.patientCombo.Location = new System.Drawing.Point(919, 387);
+            this.patientCombo.Name = "patientCombo";
+            this.patientCombo.Size = new System.Drawing.Size(143, 21);
+            this.patientCombo.TabIndex = 71;
+            this.patientCombo.ValueMember = "IdPaziente";
             // 
-            // comboBox2
+            // pazienteBindingSource
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(919, 393);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(143, 21);
-            this.comboBox2.TabIndex = 73;
+            this.pazienteBindingSource.DataMember = "paziente";
+            this.pazienteBindingSource.DataSource = this.covid19TrackerDataSet5;
+            // 
+            // covid19TrackerDataSet5
+            // 
+            this.covid19TrackerDataSet5.DataSetName = "Covid19TrackerDataSet5";
+            this.covid19TrackerDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboNurse
+            // 
+            this.comboNurse.DataSource = this.infermiereBindingSource;
+            this.comboNurse.DisplayMember = "IdInfermiere";
+            this.comboNurse.FormattingEnabled = true;
+            this.comboNurse.Location = new System.Drawing.Point(919, 420);
+            this.comboNurse.Name = "comboNurse";
+            this.comboNurse.Size = new System.Drawing.Size(143, 21);
+            this.comboNurse.TabIndex = 73;
+            this.comboNurse.ValueMember = "IdInfermiere";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(856, 398);
+            this.label27.Location = new System.Drawing.Point(856, 425);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(62, 13);
             this.label27.TabIndex = 72;
             this.label27.Text = "IdInfermiere";
             // 
-            // dateTimePicker2
+            // recallDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(919, 428);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(143, 20);
-            this.dateTimePicker2.TabIndex = 79;
+            this.recallDate.Location = new System.Drawing.Point(919, 455);
+            this.recallDate.Name = "recallDate";
+            this.recallDate.Size = new System.Drawing.Size(143, 20);
+            this.recallDate.TabIndex = 79;
             // 
-            // textBox1
+            // recallNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(919, 499);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 20);
-            this.textBox1.TabIndex = 78;
+            this.recallNumber.Location = new System.Drawing.Point(919, 492);
+            this.recallNumber.Name = "recallNumber";
+            this.recallNumber.Size = new System.Drawing.Size(143, 20);
+            this.recallNumber.TabIndex = 78;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(853, 506);
+            this.label28.Location = new System.Drawing.Point(853, 499);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(51, 13);
             this.label28.TabIndex = 77;
             this.label28.Text = "Richiamo";
             // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(919, 462);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(143, 21);
-            this.comboBox3.TabIndex = 76;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(853, 470);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(46, 13);
-            this.label29.TabIndex = 75;
-            this.label29.Text = "Vaccino";
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(826, 434);
+            this.label31.Location = new System.Drawing.Point(826, 461);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(92, 13);
             this.label31.TabIndex = 74;
             this.label31.Text = "DataEffettuazione";
             // 
-            // dataGridView1
+            // nurseGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(362, 94);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(447, 427);
-            this.dataGridView1.TabIndex = 80;
+            this.nurseGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.nurseGridView.Location = new System.Drawing.Point(362, 94);
+            this.nurseGridView.Name = "nurseGridView";
+            this.nurseGridView.Size = new System.Drawing.Size(447, 427);
+            this.nurseGridView.TabIndex = 80;
             // 
             // idNurseText
             // 
@@ -635,16 +718,16 @@ namespace OspedaleEVaccinazioni
             this.idNurseText.Text = "Inserisci id";
             this.idNurseText.MouseClick += new System.Windows.Forms.MouseEventHandler(this.idNurseText_MouseClick);
             // 
-            // NurseViewCombo
+            // nurseViewCombo
             // 
-            this.NurseViewCombo.FormattingEnabled = true;
-            this.NurseViewCombo.Items.AddRange(new object[] {
+            this.nurseViewCombo.FormattingEnabled = true;
+            this.nurseViewCombo.Items.AddRange(new object[] {
             "Vaccinazioni ricevute dal paziente (Specificato con Id)",
             "Vaccinazioni effettuate dall\'Infermiere (Specificato con Id)"});
-            this.NurseViewCombo.Location = new System.Drawing.Point(362, 41);
-            this.NurseViewCombo.Name = "NurseViewCombo";
-            this.NurseViewCombo.Size = new System.Drawing.Size(215, 21);
-            this.NurseViewCombo.TabIndex = 82;
+            this.nurseViewCombo.Location = new System.Drawing.Point(362, 41);
+            this.nurseViewCombo.Name = "nurseViewCombo";
+            this.nurseViewCombo.Size = new System.Drawing.Size(447, 21);
+            this.nurseViewCombo.TabIndex = 82;
             // 
             // label23
             // 
@@ -656,40 +739,72 @@ namespace OspedaleEVaccinazioni
             this.label23.TabIndex = 83;
             this.label23.Text = "ID";
             // 
-            // richTextBox1
+            // patologyDesc
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(919, 238);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(143, 68);
-            this.richTextBox1.TabIndex = 84;
-            this.richTextBox1.Text = "";
+            this.patologyDesc.Location = new System.Drawing.Point(919, 238);
+            this.patologyDesc.Name = "patologyDesc";
+            this.patologyDesc.Size = new System.Drawing.Size(143, 103);
+            this.patologyDesc.TabIndex = 84;
+            this.patologyDesc.Text = "";
+            // 
+            // covid19TrackerDataSet
+            // 
+            this.covid19TrackerDataSet.DataSetName = "Covid19TrackerDataSet";
+            this.covid19TrackerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vaccinoBindingSource
+            // 
+            this.vaccinoBindingSource.DataMember = "vaccino";
+            this.vaccinoBindingSource.DataSource = this.covid19TrackerDataSet;
+            // 
+            // vaccinoTableAdapter
+            // 
+            this.vaccinoTableAdapter.ClearBeforeFill = true;
+            // 
+            // vaccinoTableAdapter1
+            // 
+            this.vaccinoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // residenzaTableAdapter
+            // 
+            this.residenzaTableAdapter.ClearBeforeFill = true;
+            // 
+            // patologiaTableAdapter
+            // 
+            this.patologiaTableAdapter.ClearBeforeFill = true;
+            // 
+            // infermiereTableAdapter
+            // 
+            this.infermiereTableAdapter.ClearBeforeFill = true;
+            // 
+            // pazienteTableAdapter
+            // 
+            this.pazienteTableAdapter.ClearBeforeFill = true;
             // 
             // NurseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 533);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.patologyDesc);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.NurseViewCombo);
+            this.Controls.Add(this.nurseViewCombo);
             this.Controls.Add(this.idNurseText);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nurseGridView);
+            this.Controls.Add(this.recallDate);
+            this.Controls.Add(this.recallNumber);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label29);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboNurse);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.patientCombo);
+            this.Controls.Add(this.recallDelete);
+            this.Controls.Add(this.recallInsert);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.nurseCombo);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.datePatient);
             this.Controls.Add(this.vaccinationDate);
             this.Controls.Add(this.vaccineBox);
             this.Controls.Add(this.label24);
@@ -737,7 +852,19 @@ namespace OspedaleEVaccinazioni
             this.Text = "NurseForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NurseForm_FormClosing);
             this.Load += new System.EventHandler(this.NurseForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.residenzaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patologiaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaccinoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infermiereBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pazienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nurseGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaccinoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -787,26 +914,42 @@ namespace OspedaleEVaccinazioni
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DateTimePicker vaccinationDate;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datePatient;
         private System.Windows.Forms.ComboBox nurseCombo;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button recallDelete;
+        private System.Windows.Forms.Button recallInsert;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox patientCombo;
+        private System.Windows.Forms.ComboBox comboNurse;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker recallDate;
+        private System.Windows.Forms.TextBox recallNumber;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView nurseGridView;
         private System.Windows.Forms.TextBox idNurseText;
-        private System.Windows.Forms.ComboBox NurseViewCombo;
+        private System.Windows.Forms.ComboBox nurseViewCombo;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox patologyDesc;
+        private Covid19TrackerDataSet covid19TrackerDataSet;
+        private System.Windows.Forms.BindingSource vaccinoBindingSource;
+        private Covid19TrackerDataSetTableAdapters.vaccinoTableAdapter vaccinoTableAdapter;
+        private Covid19TrackerDataSet1 covid19TrackerDataSet1;
+        private System.Windows.Forms.BindingSource vaccinoBindingSource1;
+        private Covid19TrackerDataSet1TableAdapters.vaccinoTableAdapter vaccinoTableAdapter1;
+        private Covid19TrackerDataSet2 covid19TrackerDataSet2;
+        private System.Windows.Forms.BindingSource residenzaBindingSource;
+        private Covid19TrackerDataSet2TableAdapters.residenzaTableAdapter residenzaTableAdapter;
+        private Covid19TrackerDataSet3 covid19TrackerDataSet3;
+        private System.Windows.Forms.BindingSource patologiaBindingSource;
+        private Covid19TrackerDataSet3TableAdapters.patologiaTableAdapter patologiaTableAdapter;
+        private Covid19TrackerDataSet4 covid19TrackerDataSet4;
+        private System.Windows.Forms.BindingSource infermiereBindingSource;
+        private Covid19TrackerDataSet4TableAdapters.infermiereTableAdapter infermiereTableAdapter;
+        private Covid19TrackerDataSet5 covid19TrackerDataSet5;
+        private System.Windows.Forms.BindingSource pazienteBindingSource;
+        private Covid19TrackerDataSet5TableAdapters.pazienteTableAdapter pazienteTableAdapter;
     }
 }

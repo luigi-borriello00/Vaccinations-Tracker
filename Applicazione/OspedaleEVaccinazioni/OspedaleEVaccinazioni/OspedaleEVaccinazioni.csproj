@@ -51,47 +51,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Covid19TrackerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Covid19TrackerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Covid19TrackerDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Covid19TrackerDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Covid19TrackerDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Covid19TrackerDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Covid19TrackerDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Covid19TrackerDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Covid19TrackerDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Covid19TrackerDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Covid19TrackerDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Covid19TrackerDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="DirectorForm.cs">
+    <Compile Include="Forms\DirectorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorForm.Designer.cs">
+    <Compile Include="Forms\DirectorForm.Designer.cs">
       <DependentUpon>DirectorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirectorWarehouse.cs">
+    <Compile Include="Forms\DirectorWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorWarehouse.Designer.cs">
+    <Compile Include="Forms\DirectorWarehouse.Designer.cs">
       <DependentUpon>DirectorWarehouse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="NurseForm.cs">
+    <Compile Include="Forms\NurseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NurseForm.Designer.cs">
+    <Compile Include="Forms\NurseForm.Designer.cs">
       <DependentUpon>NurseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DirectorForm.resx">
+    <EmbeddedResource Include="Forms\DirectorForm.resx">
       <DependentUpon>DirectorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirectorWarehouse.resx">
+    <EmbeddedResource Include="Forms\DirectorWarehouse.resx">
       <DependentUpon>DirectorWarehouse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NurseForm.resx">
+    <EmbeddedResource Include="Forms\NurseForm.resx">
       <DependentUpon>NurseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -103,6 +133,72 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Covid19TrackerDataSet.xsc">
+      <DependentUpon>Covid19TrackerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Covid19TrackerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Covid19TrackerDataSet.xss">
+      <DependentUpon>Covid19TrackerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet1.xsc">
+      <DependentUpon>Covid19TrackerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Covid19TrackerDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Covid19TrackerDataSet1.xss">
+      <DependentUpon>Covid19TrackerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet2.xsc">
+      <DependentUpon>Covid19TrackerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Covid19TrackerDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Covid19TrackerDataSet2.xss">
+      <DependentUpon>Covid19TrackerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet3.xsc">
+      <DependentUpon>Covid19TrackerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Covid19TrackerDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Covid19TrackerDataSet3.xss">
+      <DependentUpon>Covid19TrackerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet4.xsc">
+      <DependentUpon>Covid19TrackerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Covid19TrackerDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Covid19TrackerDataSet4.xss">
+      <DependentUpon>Covid19TrackerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet5.xsc">
+      <DependentUpon>Covid19TrackerDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Covid19TrackerDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Covid19TrackerDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Covid19TrackerDataSet5.xss">
+      <DependentUpon>Covid19TrackerDataSet5.xsd</DependentUpon>
+    </None>
     <None Include="DataClasses.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses.designer.cs</LastGenOutput>

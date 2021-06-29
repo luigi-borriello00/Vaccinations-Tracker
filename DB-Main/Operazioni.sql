@@ -28,10 +28,17 @@ where I.IdInfermiere = 6;
 select count(*) as "Numero pazienti malati"
 from covid19vaccinetracker.paziente where paziente.IdPatologia = 3;
 
-/* Infermieri che ha eseguito piu vaccinazioni */
-select count(*) as "Vaccinazioni effettuate", I.Nome, I.Cognome
+/* Infermiere che ha eseguito piu vaccinazioni */
+select count(*) as "Vaccinazioni effettuate", I.Nome, I.Cognome, I.CodFiscale, I.DataNascita, I.DataAssunzione, I.Telefono, I.Mail, I.Sesso
 from covid19vaccinetracker.infermiere I join covid19vaccinetracker.vaccinazione V on I.IdInfermiere = V.IdInfermiere
-group by I.Nome
+group by I.Nome, I.Cognome, I.CodFiscale, I.DataNascita, I.DataAssunzione, I.Telefono, I.Mail, I.Sesso
+order by count(*) desc, I.Cognome;
+
+/* Infermiere che ha eseguito piu vaccinazioni in un mese */
+select count(*) as "Vaccinazioni effettuate", I.Nome, I.Cognome, I.CodFiscale, I.DataNascita, I.DataAssunzione, I.Telefono, I.Mail, I.Sesso
+from covid19vaccinetracker.infermiere I join covid19vaccinetracker.vaccinazione V on I.IdInfermiere = V.IdInfermiere
+where month(V.DataEffettuazione) = month('2021-04-01')
+group by I.Nome, I.Cognome, I.CodFiscale, I.DataNascita, I.DataAssunzione, I.Telefono, I.Mail, I.Sesso
 order by count(*) desc, I.Cognome;
 
 /* Infermieri che hanno effettuato piu di 1 vacc */
@@ -40,10 +47,11 @@ from covid19vaccinetracker.infermiere I join covid19vaccinetracker.vaccinazione 
 group by I.Nome
 having count(*) > 1;
 
-/* Vaccinazioni vaccino per vaccino */
-select count(*) as "N° vaccini effettuati", VC.Nome as "Vaccino"
+/* Vaccinazioni vaccino per vaccino mese per mese*/
+select datename(month, V.DataEffettuazione) as "Mese", count(*) as "N° vaccini effettuati", VC.Nome as "Vaccino"
 from covid19vaccinetracker.vaccinazione V join covid19vaccinetracker.paziente P on V.IdPaziente = P.IdPaziente join covid19vaccinetracker.vaccino VC on VC.IdVaccino = P.IdVaccino
-group by VC.Nome;
+group by datename(month, V.DataEffettuazione), VC.Nome
+order by datename(month, V.DataEffettuazione), Vc.Nome;
 
 /* Visualizzazione scorte magazzino */
 select D.TotDosi, V.Nome as "Nome Vaccino"
@@ -58,5 +66,14 @@ where PA.IdPatologia = 1;
 select F.*, V.Nome as "NomeVaccino"
 from covid19vaccinetracker.fornitore F join covid19vaccinetracker.vaccino V on F.IdVaccino = V.IdVaccino
 order by V.Nome;
+
+/* Infermiere con piu vaccinazioni */
+select count(*) as "Numero vaccinazioni effettuate"
+from covid19vaccinetracker.infermiere I join covid19vaccinetracker.vaccinazione V
+on I.IdInfermiere = V.IdInfermiere
+where I.IdOspedale = 1
+group by I.Nome
+order by count(*) desc
+
 
 
