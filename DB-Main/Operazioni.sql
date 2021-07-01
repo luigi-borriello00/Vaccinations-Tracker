@@ -76,12 +76,13 @@ select F.*, V.Nome as "NomeVaccino"
 from covid19vaccinetracker.fornitore F join covid19vaccinetracker.vaccino V on F.IdVaccino = V.IdVaccino
 order by V.Nome;
 
-/* Infermiere con piu vaccinazioni */
-select count(*) as "Numero vaccinazioni effettuate"
-from covid19vaccinetracker.infermiere I join covid19vaccinetracker.vaccinazione V
-on I.IdInfermiere = V.IdInfermiere
-where I.IdOspedale = 1
-group by I.Nome
+/* Top 10 Infermieri con piu vaccinazioni */
+SELECT TOP (5) Inf.IdInfermiere, Inf.Nome,Inf.Cognome, Inf.Telefono, Inf.CodFiscale, Inf.DataNascita, Inf.Sesso,
+Inf.DataAssunzione, Inf.Mail, count(*) as "Numero Vaccinazioni effettuate"
+from covid19vaccinetracker.infermiere Inf, covid19vaccinetracker.vaccinazione V 
+where Inf.IdInfermiere = V.IdInfermiere
+group by Inf.IdInfermiere, Inf.Nome,Inf.Cognome, Inf.Telefono, Inf.CodFiscale, Inf.DataNascita, Inf.Sesso,
+Inf.DataAssunzione, Inf.Mail
 order by count(*) desc
 
 
