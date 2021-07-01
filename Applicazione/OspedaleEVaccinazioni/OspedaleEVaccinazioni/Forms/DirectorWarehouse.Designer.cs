@@ -29,6 +29,7 @@ namespace OspedaleEVaccinazioni
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.stocksDelete = new System.Windows.Forms.Button();
             this.stocksInsert = new System.Windows.Forms.Button();
@@ -59,11 +60,26 @@ namespace OspedaleEVaccinazioni
             this.goBack = new System.Windows.Forms.Button();
             this.supplierVaccine = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridWare = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.wareViewButt = new System.Windows.Forms.Button();
+            this.warechoice = new System.Windows.Forms.ComboBox();
+            this.covid19TrackerDataSet6 = new OspedaleEVaccinazioni.Covid19TrackerDataSet6();
+            this.dosiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dosiTableAdapter = new OspedaleEVaccinazioni.Covid19TrackerDataSet6TableAdapters.dosiTableAdapter();
+            this.covid19TrackerDataSet7 = new OspedaleEVaccinazioni.Covid19TrackerDataSet7();
+            this.vaccinoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vaccinoTableAdapter = new OspedaleEVaccinazioni.Covid19TrackerDataSet7TableAdapters.vaccinoTableAdapter();
+            this.covid19TrackerDataSet8 = new OspedaleEVaccinazioni.Covid19TrackerDataSet8();
+            this.fornitoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fornitoreTableAdapter = new OspedaleEVaccinazioni.Covid19TrackerDataSet8TableAdapters.fornitoreTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.gridWare)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaccinoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornitoreBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,11 +144,14 @@ namespace OspedaleEVaccinazioni
             // 
             // stocksType
             // 
+            this.stocksType.DataSource = this.vaccinoBindingSource;
+            this.stocksType.DisplayMember = "Nome";
             this.stocksType.FormattingEnabled = true;
             this.stocksType.Location = new System.Drawing.Point(533, 402);
             this.stocksType.Name = "stocksType";
             this.stocksType.Size = new System.Drawing.Size(140, 21);
             this.stocksType.TabIndex = 36;
+            this.stocksType.ValueMember = "IdVaccino";
             // 
             // vaccineDelete
             // 
@@ -324,11 +343,14 @@ namespace OspedaleEVaccinazioni
             // 
             // supplierVaccine
             // 
+            this.supplierVaccine.DataSource = this.vaccinoBindingSource;
+            this.supplierVaccine.DisplayMember = "Nome";
             this.supplierVaccine.FormattingEnabled = true;
             this.supplierVaccine.Location = new System.Drawing.Point(92, 435);
             this.supplierVaccine.Name = "supplierVaccine";
             this.supplierVaccine.Size = new System.Drawing.Size(140, 21);
             this.supplierVaccine.TabIndex = 67;
+            this.supplierVaccine.ValueMember = "IdVaccino";
             // 
             // label15
             // 
@@ -339,13 +361,13 @@ namespace OspedaleEVaccinazioni
             this.label15.TabIndex = 66;
             this.label15.Text = "Vaccino";
             // 
-            // dataGridView1
+            // gridWare
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(353, 78);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(487, 227);
-            this.dataGridView1.TabIndex = 68;
+            this.gridWare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridWare.Location = new System.Drawing.Point(353, 78);
+            this.gridWare.Name = "gridWare";
+            this.gridWare.Size = new System.Drawing.Size(487, 227);
+            this.gridWare.TabIndex = 68;
             // 
             // label3
             // 
@@ -357,35 +379,78 @@ namespace OspedaleEVaccinazioni
             this.label3.TabIndex = 69;
             this.label3.Text = "Visualizza Info";
             // 
-            // button1
+            // wareViewButt
             // 
-            this.button1.Location = new System.Drawing.Point(587, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 21);
-            this.button1.TabIndex = 71;
-            this.button1.Text = "Visualizza";
-            this.button1.UseVisualStyleBackColor = true;
+            this.wareViewButt.Location = new System.Drawing.Point(587, 45);
+            this.wareViewButt.Name = "wareViewButt";
+            this.wareViewButt.Size = new System.Drawing.Size(139, 21);
+            this.wareViewButt.TabIndex = 71;
+            this.wareViewButt.Text = "Visualizza";
+            this.wareViewButt.UseVisualStyleBackColor = true;
+            this.wareViewButt.Click += new System.EventHandler(this.wareViewButt_Click);
             // 
-            // comboBox2
+            // warechoice
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.warechoice.FormattingEnabled = true;
+            this.warechoice.Items.AddRange(new object[] {
             "Scorte",
             "Fornitori"});
-            this.comboBox2.Location = new System.Drawing.Point(442, 46);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(139, 21);
-            this.comboBox2.TabIndex = 72;
+            this.warechoice.Location = new System.Drawing.Point(442, 46);
+            this.warechoice.Name = "warechoice";
+            this.warechoice.Size = new System.Drawing.Size(139, 21);
+            this.warechoice.TabIndex = 72;
+            // 
+            // covid19TrackerDataSet6
+            // 
+            this.covid19TrackerDataSet6.DataSetName = "Covid19TrackerDataSet6";
+            this.covid19TrackerDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dosiBindingSource
+            // 
+            this.dosiBindingSource.DataMember = "dosi";
+            this.dosiBindingSource.DataSource = this.covid19TrackerDataSet6;
+            // 
+            // dosiTableAdapter
+            // 
+            this.dosiTableAdapter.ClearBeforeFill = true;
+            // 
+            // covid19TrackerDataSet7
+            // 
+            this.covid19TrackerDataSet7.DataSetName = "Covid19TrackerDataSet7";
+            this.covid19TrackerDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vaccinoBindingSource
+            // 
+            this.vaccinoBindingSource.DataMember = "vaccino";
+            this.vaccinoBindingSource.DataSource = this.covid19TrackerDataSet7;
+            // 
+            // vaccinoTableAdapter
+            // 
+            this.vaccinoTableAdapter.ClearBeforeFill = true;
+            // 
+            // covid19TrackerDataSet8
+            // 
+            this.covid19TrackerDataSet8.DataSetName = "Covid19TrackerDataSet8";
+            this.covid19TrackerDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fornitoreBindingSource
+            // 
+            this.fornitoreBindingSource.DataMember = "fornitore";
+            this.fornitoreBindingSource.DataSource = this.covid19TrackerDataSet8;
+            // 
+            // fornitoreTableAdapter
+            // 
+            this.fornitoreTableAdapter.ClearBeforeFill = true;
             // 
             // DirectorWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 469);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.warechoice);
+            this.Controls.Add(this.wareViewButt);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridWare);
             this.Controls.Add(this.supplierVaccine);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.goBack);
@@ -421,7 +486,13 @@ namespace OspedaleEVaccinazioni
             this.Text = "DirectorWarehouse";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DirectorWarehouse_FormClosing);
             this.Load += new System.EventHandler(this.DirectorWarehouse_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridWare)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaccinoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covid19TrackerDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornitoreBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,9 +530,18 @@ namespace OspedaleEVaccinazioni
         private System.Windows.Forms.Button goBack;
         private System.Windows.Forms.ComboBox supplierVaccine;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridWare;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button wareViewButt;
+        private System.Windows.Forms.ComboBox warechoice;
+        private Covid19TrackerDataSet6 covid19TrackerDataSet6;
+        private System.Windows.Forms.BindingSource dosiBindingSource;
+        private Covid19TrackerDataSet6TableAdapters.dosiTableAdapter dosiTableAdapter;
+        private Covid19TrackerDataSet7 covid19TrackerDataSet7;
+        private System.Windows.Forms.BindingSource vaccinoBindingSource;
+        private Covid19TrackerDataSet7TableAdapters.vaccinoTableAdapter vaccinoTableAdapter;
+        private Covid19TrackerDataSet8 covid19TrackerDataSet8;
+        private System.Windows.Forms.BindingSource fornitoreBindingSource;
+        private Covid19TrackerDataSet8TableAdapters.fornitoreTableAdapter fornitoreTableAdapter;
     }
 }

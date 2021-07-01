@@ -3,6 +3,15 @@ select V.*, P.Nome as "Nome Paziente", P.Cognome  as "Nome Paziente", I.Nome as 
 from covid19vaccinetracker.vaccinazione V join covid19vaccinetracker.paziente P on P.IdPaziente = V.IdPaziente join covid19vaccinetracker.infermiere I on I.IdInfermiere = V.IdInfermiere
 where V.DataEffettuazione = "2021-05-10";
 
+/* Infermieri vaccinanti in una data */
+select *
+from covid19vaccinetracker.infermiere I
+where I.IdInfermiere in (select INF.IdInfermiere
+						from covid19vaccinetracker.infermiere INF, covid19vaccinetracker.vaccinazione V
+						where INF.IdInfermiere = V.IdInfermiere
+						and V.DataEffettuazione = '2021-06-29')
+
+
 /* Pazienti vaccinati */
 select P.* 
 from covid19vaccinetracker.vaccinazione V join covid19vaccinetracker.paziente P on V.IdPaziente = P.IdPaziente;
@@ -54,7 +63,7 @@ group by datename(month, V.DataEffettuazione), VC.Nome
 order by datename(month, V.DataEffettuazione), Vc.Nome;
 
 /* Visualizzazione scorte magazzino */
-select D.TotDosi, V.Nome as "Nome Vaccino"
+select D.TotDosi, V.* as "Nome Vaccino"
 from covid19vaccinetracker.dosi D join covid19vaccinetracker.vaccino V on D.IdVaccino = V.IdVaccino;
 
 /* Totale pazienti con una certa patologia */

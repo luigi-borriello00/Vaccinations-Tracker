@@ -260,7 +260,15 @@ namespace OspedaleEVaccinazioni
                                 Patologia = Pa.NomePatologia,
                                 Vaccino = Va.Nome
                             };
-                nurseGridView.DataSource = query;
+                try
+                {
+                    nurseGridView.DataSource = query;
+                }
+                catch(System.FormatException exc)
+                {
+                    MessageBoxButtons box = MessageBoxButtons.OK;
+                    MessageBox.Show("Inserire l'ID correttamente", "Error", box);
+                }
             }
 
             // All Vaccination by the nurse

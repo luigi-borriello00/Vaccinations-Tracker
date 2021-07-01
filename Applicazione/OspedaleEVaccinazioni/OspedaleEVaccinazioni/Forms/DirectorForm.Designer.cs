@@ -360,12 +360,13 @@ namespace OspedaleEVaccinazioni
             // 
             this.choiceDirector.FormattingEnabled = true;
             this.choiceDirector.Items.AddRange(new object[] {
-            "Vaccinazioni effettuate in un determinato giorno (specificare la data).",
+            "Vaccinazioni effettuate in una specifica data (specificare la data).",
             "Numero di vaccinati per ogni città registrata.",
-            "Infermiere che ha effettuato più vaccinazioni.",
+            "Top 5 Infermieri con più vaccinazioni.",
             "Infermiere che ha effettuato più vaccinazioni in un mese (specificare data).",
             "Infermieri che hanno eseguito più di TOT vaccinazioni (specificare il n°).",
-            "Totale Pfizer/Moderna/Astrazeneca fatti mese per mese."});
+            "Totale Pfizer/Moderna/Astrazeneca fatti mese per mese.",
+            "Infermieri che hanno vaccinato in un determinato giorno (specificare la data)."});
             this.choiceDirector.Location = new System.Drawing.Point(381, 49);
             this.choiceDirector.Name = "choiceDirector";
             this.choiceDirector.Size = new System.Drawing.Size(423, 21);

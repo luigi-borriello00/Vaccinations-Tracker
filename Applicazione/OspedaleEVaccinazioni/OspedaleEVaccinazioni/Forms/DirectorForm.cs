@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -121,7 +122,7 @@ namespace OspedaleEVaccinazioni
             }
             else
             {
-                residenza ord = new residenza
+                residenza res = new residenza
                 {
                     CAP = Convert.ToInt32(this.residenceCap.Text),
                     Citta = this.residenceName.Text,
@@ -129,7 +130,7 @@ namespace OspedaleEVaccinazioni
 
                 };
 
-                db.residenza.InsertOnSubmit(ord);
+                db.residenza.InsertOnSubmit(res);
 
                 // Submit the change to the database.
                 try
@@ -141,24 +142,15 @@ namespace OspedaleEVaccinazioni
                     Console.WriteLine(exc);
                     MessageBoxButtons box = MessageBoxButtons.OK;
                     MessageBox.Show(exc.Message, "Error", box);
-                    // Make some adjustments.
                 }
             }
         }
 
         private void dirButton_Click(object sender, EventArgs e)
         {
-            /*Vaccinazioni effettuate in un determinato giorno (specificare la data).
-                
-            Infermiere che ha effettuato più vaccinazioni.
-            Infermieri che hanno eseguito più di TOT vaccinazioni (specificare il n°).
-            Totale Pfizer/Moderna/Astrazeneca fatti in un mese.
-             * 
-             * 
-             * 
-             * */
-            // Vaccinazioni effettuate in un determinato giorno (specificare la data).
-            if (this.choiceDirector.SelectedIndex == 0)
+            
+            // Vaccinazioni in una data
+            if( this.choiceDirector.SelectedIndex == 0)
             {
                 var query = from V in db.vaccinazione
                             join P in db.paziente on V.IdPaziente equals P.IdPaziente
@@ -173,7 +165,7 @@ namespace OspedaleEVaccinazioni
                                 IdPaziente = V.IdPaziente,
                                 IdInfermiere = V.IdInfermiere,
                                 Nome_Paziente = P.Nome,
-                                Cognome_Paziente = P.Cognome,
+                                Column1 = P.Cognome,
                                 Nome_Infermiere = I.Nome,
                                 Cognome_Infermiere = I.Cognome
                             };
@@ -195,41 +187,41 @@ namespace OspedaleEVaccinazioni
                 this.dataGridDir.DataSource = query;
             }
 
-            // Infermiere con più vaccinazioni
+            // Top 5 Infermieri con più vaccinazioni
             if (this.choiceDirector.SelectedIndex == 2)
             {
-                var query = from I in db.infermiere
-                            join V in db.vaccinazione on I.IdInfermiere equals V.IdInfermiere
-                            where
-                              I.IdOspedale == 1
-                            group I by new
-                            {
-                                I.IdInfermiere,
-                                I.Nome,
-                                I.Cognome,
-                                I.CodFiscale,
-                                I.DataNascita,
-                                I.DataAssunzione,
-                                I.Mail,
-                                I.Telefono,
-                                I.Sesso
-                            } into g
-                            orderby
-                              g.Count() descending
-                            select new
-                            {
-                                g.Key.IdInfermiere,
-                                g.Key.Nome,
-                                g.Key.Cognome,
-                                g.Key.CodFiscale,
-                                g.Key.DataNascita,
-                                g.Key.DataAssunzione,
-                                g.Key.Mail,
-                                g.Key.Telefono,
-                                g.Key.Sesso,
-                                Numero_vaccinazioni_effettuate = g.Count()
-                            };
-                this.dataGridDir.DataSource = query.Take(1);
+                var query = (from Inf in db.infermiere
+                             from V in db.vaccinazione
+                             where
+                               Inf.IdInfermiere == V.IdInfermiere
+                             group Inf by new
+                             {
+                                 Inf.IdInfermiere,
+                                 Inf.Nome,
+                                 Inf.Cognome,
+                                 Inf.Telefono,
+                                 Inf.CodFiscale,
+                                 Inf.DataNascita,
+                                 Inf.Sesso,
+                                 Inf.DataAssunzione,
+                                 Inf.Mail
+                             } into g
+                             orderby
+                               g.Count() descending
+                             select new
+                             {
+                                 g.Key.IdInfermiere,
+                                 g.Key.Nome,
+                                 g.Key.Cognome,
+                                 g.Key.Telefono,
+                                 g.Key.CodFiscale,
+                                 g.Key.DataNascita,
+                                 g.Key.Sesso,
+                                 g.Key.DataAssunzione,
+                                 g.Key.Mail,
+                                 Numero_Vaccinazioni_effettuate = g.Count()
+                             }).Take(5);
+                this.dataGridDir.DataSource = query;
             }
 
             // Infermiere con più vaccinazioni in un mese
@@ -266,7 +258,7 @@ namespace OspedaleEVaccinazioni
                                 g.Key.Mail,
                                 g.Key.Sesso
                             };
-                this.dataGridDir.DataSource = query;
+                this.dataGridDir.DataSource = query.First();
             }
 
                 // Infermieri con più di tot Vaccinazioni
@@ -300,7 +292,18 @@ namespace OspedaleEVaccinazioni
                                 g.Key.Sesso,
                                 Vaccinazioni_effettuate = g.Count(),
                             };
-                this.dataGridDir.DataSource = query;
+                try
+                {
+                    this.dataGridDir.DataSource = query;
+                }
+                catch (System.FormatException exc)
+                {
+                    Console.WriteLine(exc);
+                    MessageBoxButtons box = MessageBoxButtons.OK;
+                    MessageBox.Show("Inserire il numero di vaccinazioni minime correttamente", "Error", box);
+                }
+
+
             }
 
             // Tot vaccini mese per mese
@@ -311,17 +314,48 @@ namespace OspedaleEVaccinazioni
                             join VC in db.vaccino on P.IdVaccino equals VC.IdVaccino
                             group new { V, VC } by new
                             {
-                                Mese = V.DataEffettuazione.Date.Month,
-                                Vaccino = VC.Nome
+                                Mese = V.DataEffettuazione.Month,
+                                Nome_Vaccino = VC.Nome
                             } into g
                             orderby
                               g.Key.Mese,
-                              g.Key.Vaccino
+                              g.Key.Nome_Vaccino
+                            
                             select new
                             {
-                                Mese = g.Key.Mese,
+                                Mese = DateTimeFormatInfo.GetInstance(null).GetMonthName(g.Key.Mese),
                                 N_vaccini_effettuati = g.Count(),
-                                Vaccino = g.Key.Vaccino
+                                Vaccino = g.Key.Nome_Vaccino
+                            };
+                
+                this.dataGridDir.DataSource = query;
+            }
+
+            // Infermieri he hanno vaccinato in un determinato giorno (specificare la data).
+            if (this.choiceDirector.SelectedIndex == 6)
+            {
+                var query = from I in db.infermiere
+                            where
+                                  (from INF in db.infermiere
+                                   join V in db.vaccinazione
+                                   on new { INF.IdInfermiere, DataEffettuazione = this.dateDir.Value }
+                                   equals new { V.IdInfermiere, V.DataEffettuazione }
+                                   select new
+                                   {
+                                       INF.IdInfermiere
+                                   }).Contains(new { IdInfermiere = I.IdInfermiere })
+                            select new
+                            {
+                                IdInfermiere = I.IdInfermiere,
+                                Nome = I.Nome,
+                                Cognome = I.Cognome,
+                                DataNascita = I.DataNascita,
+                                Sesso = I.Sesso,
+                                CodFiscale = I.CodFiscale,
+                                Telefono = I.Telefono,
+                                Mail = I.Mail,
+                                DataAssunzione = I.DataAssunzione,
+                                IdOspedale = I.IdOspedale
                             };
                 this.dataGridDir.DataSource = query;
             }
