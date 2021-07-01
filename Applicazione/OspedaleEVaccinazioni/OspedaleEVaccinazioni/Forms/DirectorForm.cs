@@ -165,7 +165,7 @@ namespace OspedaleEVaccinazioni
                                 IdPaziente = V.IdPaziente,
                                 IdInfermiere = V.IdInfermiere,
                                 Nome_Paziente = P.Nome,
-                                Column1 = P.Cognome,
+                                Cognome = P.Cognome,
                                 Nome_Infermiere = I.Nome,
                                 Cognome_Infermiere = I.Cognome
                             };
@@ -258,7 +258,7 @@ namespace OspedaleEVaccinazioni
                                 g.Key.Mail,
                                 g.Key.Sesso
                             };
-                this.dataGridDir.DataSource = query.First();
+                this.dataGridDir.DataSource = query.Take(1);
             }
 
                 // Infermieri con più di tot Vaccinazioni
