@@ -1,2 +1,0 @@
-Una vista su Admin
-Una vista su infermiere che inserire il suo id e successivamente può inserire il paziente 
