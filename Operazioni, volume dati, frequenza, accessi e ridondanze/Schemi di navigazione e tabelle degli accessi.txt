@@ -1,0 +1,19 @@
+D1  Inserimento di un nuovo vaccino.
+1 volta al mese
+1 S -> 2 al mese
+
+D2  Inserimento di un nuovo infermiere.
+2 volte al mese
+1 S -> 4 al mese
+
+D3  Inserimento di un nuovo fornitore.
+2 volte al mese
+1 S -> 4 al mese
+
+D4  Inserimento di nuove scorte di vaccini nel magazzino.
+10 volte a settimana
+LETTURA VACCINO -> LETTURA APPARTENENZA -> SCRITTURA DOSI
+2 L + 1 S -> 40 a settimana
+
+D5  Visualizzazione delle vaccinazioni effettuate in un determinato giorno.
+
