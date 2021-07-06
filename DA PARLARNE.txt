@@ -1,0 +1,1 @@
+Schema finale con attributi, fornitore -> vaccino e tutto il resto
