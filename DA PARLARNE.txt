@@ -1,1 +1,8 @@
 Schema finale con attributi, fornitore -> vaccino e tutto il resto
+
+Vedere accessi:
+D5 
+D6  
+D11(volume dati, troppi pochi vaccini)
+D12 (TotDosi corrisponde a un singolo vaccino quindi stimi volume dati non va bene(?))
+D13
