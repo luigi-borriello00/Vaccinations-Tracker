@@ -38,8 +38,8 @@ D12      3 volte al giorno
 D13      1 volta a settimana
 
 I1       5 volte a settimana
-I2       500 volte al giorno
-I3       300 volte al giorno
+I2       16000 volte al giorno
+I3       10000 volte al giorno
 I4       5 volte al giorno
 I5       3 volte a settimana
 I6       1 volta al mese
