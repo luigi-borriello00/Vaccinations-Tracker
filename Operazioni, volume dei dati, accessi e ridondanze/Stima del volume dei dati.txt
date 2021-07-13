@@ -1,8 +1,8 @@
 CONCETTO        COSTRUTTO       VOLUME
 
 OSPEDALE        E                 1
-COMPRENDE(PAZ)  A               500.000
-COMPRENDE(INF)  A                1.000
+COMPRENDE       A               501.000
+PERSONA         E               501.000
 INFERMIERE      E                1.000
 PAZIENTE        E               500.000
 EFFETTUA        A               1.000.000
